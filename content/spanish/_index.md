@@ -36,16 +36,4 @@ features:
       enable: true
       label: "Más información"
       link: "sobre-el-hackathon/"
-
-  - title: "Organizan y apoyan"
-    image: "/images/service-3.png"
-    image_alt: "Ilustración de paneles con un gráfico de líneas, controles deslizantes y una lista de progreso"
-    content: "Organizado por [Charlas RSE en español](https://github.com/charlas-rse-espanol)."
-    bulletpoints:
-      - "[Institución anfitriona por confirmar]"
-      - "[Patrocinador o apoyo por confirmar]"
-    button:
-      enable: false
-      label: ""
-      link: ""
 ---

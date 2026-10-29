@@ -1,1 +1,42 @@
 /* Add your own custom styles here */
+
+/* Logos in the organization cards (layouts/_partials/organizations.html) */
+:root {
+  /* logo height in the cards; wide logos may stay smaller, limited by the card width */
+  --org-logo-height: 16rem;
+}
+.org-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: var(--org-logo-height);
+}
+.org-logo img {
+  max-width: 100%;
+  max-height: var(--org-logo-height);
+  width: auto;
+  object-fit: contain;
+}
+
+/* `large: true` lets a wide logo use the full card width, with no fixed height */
+.org-logo-large {
+  height: auto;
+}
+.org-logo-large img {
+  width: 100%;
+  height: auto;
+  max-height: none;
+}
+
+/* Organizan + Con el apoyo de: one solid grey block that fades to white at the end */
+.org-block {
+  background: linear-gradient(to bottom, rgb(249, 249, 249) 70%, #fff 100%);
+}
+.dark .org-block {
+  background: linear-gradient(
+    to bottom,
+    var(--color-darkmode-light) 70%,
+    var(--color-darkmode-body) 100%
+  );
+}

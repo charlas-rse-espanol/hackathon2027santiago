@@ -1,0 +1,50 @@
+<!-- Organizations: logo cards for a sections/* page with an `organizations` list -->
+{{ with site.GetPage .page }}
+  {{ if .Params.enable }}
+    <section class="section-sm {{ $.class }}">
+      <div class="container">
+        <div class="row">
+          <div class="md:col-10 lg:col-8 xl:col-6 mx-auto mb-10 text-center">
+            <h2 class="mb-4">
+              {{ .Title | markdownify }}
+            </h2>
+            {{ with .Params.description }}
+              <p>{{ . | markdownify }}</p>
+            {{ end }}
+          </div>
+        </div>
+        <div class="row justify-center">
+          {{ range .Params.organizations }}
+            <div class="sm:col-6 lg:col-4 mb-6">
+              {{ $card := "bg-light dark:bg-darkmode-light flex h-full flex-col items-center justify-center rounded-lg px-7 py-10 text-center" }}
+              {{ if .link }}
+                <a
+                  href="{{ .link }}"
+                  target="_blank"
+                  rel="noopener"
+                  class="{{ $card }} transition-shadow hover:shadow-lg">
+              {{ else }}
+                <div class="{{ $card }}">
+              {{ end }}
+              {{/* logo sizing lives in assets/css/custom.css */}}
+              <div class="org-logo {{ if .large }}org-logo-large{{ end }} {{ if not .hide_name }}mb-6{{ end }}">
+                {{ partial "image" (dict "Src" .logo "Alt" (printf "Logo de %s" .name) "DisplayXL" "600x" "DisplayLG" "600x" "DisplayMD" "600x" "DisplaySM" "600x") }}
+              </div>
+              {{ if not .hide_name }}
+                <h3 class="h5 font-primary font-semibold">
+                  {{ .name }}
+                </h3>
+              {{ end }}
+              {{ if .link }}
+                </a>
+              {{ else }}
+                </div>
+              {{ end }}
+            </div>
+          {{ end }}
+        </div>
+      </div>
+    </section>
+  {{ end }}
+{{ end }}
+<!-- /Organizations -->
