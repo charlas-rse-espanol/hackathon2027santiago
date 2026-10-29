@@ -1,6 +1,6 @@
 [build]
 publish = "public"
-command = "pnpm project-setup; pnpm build"
+command = "npm run project-setup; npm run build"
 
 [build.environment]
 HUGO_VERSION = "0.158.0"

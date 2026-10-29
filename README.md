@@ -111,11 +111,26 @@ First you need to [clone](https://github.com/zeon-studio/hugoplate) or [download
 
 To start using this template, you need to have some prerequisites installed on your machine.
 
-- [Hugo Extended v0.144+](https://gohugo.io/installation/)
+- [Hugo Extended](https://gohugo.io/installation/), **exactly** the version set as `HUGO_VERSION` in `netlify.toml` (currently `0.158.0`)
 - [Node v22+](https://nodejs.org/en/download/)
 - [Go v1.24+](https://go.dev/doc/install)
 
+This project uses **npm** as its package manager.
+
+#### Installing the pinned Hugo version with mise
+
+Homebrew and most package managers only install the latest Hugo. To get the exact version this project needs, use [mise](https://mise.jdx.dev/), which reads the version pinned in `mise.toml`:
+
+```bash
+brew install mise                # or see https://mise.jdx.dev/getting-started.html
+eval "$(mise activate zsh)"      # add this line to ~/.zshrc to make it permanent
+mise install                     # run from the repository root
+hugo version                     # should print v0.158.0+extended
+```
+
 ### 👉 Project Setup
+
+This repository has already been converted with this script, so you can skip this step (running it again is harmless).
 
 We built this custom script to make your project setup easier. It will create a new Hugo theme folder and clone the Hugoplate theme into it. Then move the exampleSite folder into the root directory. So that you can start your Hugo server without going into the exampleSite folder. Use the following command to setup your project.
 
