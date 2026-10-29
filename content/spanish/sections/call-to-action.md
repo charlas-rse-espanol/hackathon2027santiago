@@ -1,13 +1,13 @@
 ---
 enable: true
-title: "Ready to build your next project with Hugo?"
+title: "¿Te interesa participar?"
 image: "/images/call-to-action.png"
-image_alt: "Illustration of an astronaut floating among dashboard widgets"
-description: "Experience the future of web development with Hugoplate and Hugo. Build lightning-fast static sites with ease and flexibility."
+image_alt: "Ilustración de un astronauta flotando entre paneles de datos"
+description: "Las postulaciones abrirán pronto. Revisa los detalles del hackathon mientras tanto."
 button:
   enable: true
-  label: "Fork Deploy and Edit Online 🚀"
-  link: "https://app.sitepins.com/new/clone?name=Hugoplate&repository=https://github.com/zeon-studio/hugoplate?aff=hugoplate"
+  label: "Sobre el hackathon"
+  link: "/sobre-el-hackathon"
 
 # don't create a separate page
 build:

@@ -1,55 +1,49 @@
 ---
 # Banner
 banner:
-  title: "The Ultimate Starter Template You Need To Start Your Hugo Project"
-  content: "Hugoplate is a free starter template built with Hugo and TailwindCSS, providing everything you need to jump-start your Hugo project and save valuable time."
+  title: "Hackathon RSE Santiago 2027"
+  content: "Un hackathon para quienes desarrollan software de investigación. Santiago de Chile, [fechas por confirmar] de 2027."
   image: "/images/banner.png"
-  image_alt: "Illustration of a person working on a laptop at a desk"
+  image_alt: "Ilustración de una persona trabajando con un computador portátil en un escritorio"
   button:
     enable: true
-    label: "Fork Deploy and Edit Online 🚀"
-    link: "https://app.sitepins.com/new/clone?name=Hugoplate&repository=https://github.com/zeon-studio/hugoplate?aff=hugoplate"
+    label: "Más información"
+    link: "/sobre-el-hackathon"
 
 # Features
 features:
-  - title: "What's Included in Hugoplate"
+  - title: "¿Qué es el Hackathon RSE?"
     image: "/images/service-1.png"
-    image_alt: "Illustration of interface cards: a video player, bar charts, sliders and a loading spinner"
-    content: "Hugoplate is a comprehensive starter template that includes everything you need to get started with your Hugo project. What's Included in Hugoplate"
+    image_alt: "Ilustración de tarjetas de interfaz: un reproductor de video, gráficos de barras y controles deslizantes"
+    content: "Un encuentro presencial de [duración por confirmar] días en el que equipos trabajan en proyectos de software de investigación, con el apoyo de personas con experiencia en Research Software Engineering (RSE)."
     bulletpoints:
-      - "10+ Pre-build pages"
-      - "95+ Google Pagespeed Score"
-      - "Build with Hugo and TailwindCSS for easy and customizable styling"
-      - "Fully responsive on all devices"
-      - "SEO-optimized for better search engine rankings"
-      - "**Open-source and free** for personal and commercial use"
+      - "[Tema o desafío 1 por confirmar]"
+      - "[Tema o desafío 2 por confirmar]"
+      - "[Tema o desafío 3 por confirmar]"
     button:
       enable: false
-      label: "Get Started Now"
-      link: "#"
+      label: ""
+      link: ""
 
-  - title: "Discover the Key Features Of Hugo"
+  - title: "¿Quién puede participar?"
     image: "/images/service-2.png"
-    image_alt: "Illustration of chart cards: bar charts, a donut chart and a line graph"
-    content: "Hugo is an all-in-one web framework for building fast, content-focused websites. It offers a range of exciting features for developers and website creators. Some of the key features are:"
+    image_alt: "Ilustración de tarjetas con gráficos de barras, un gráfico de anillo y un gráfico de líneas"
+    content: "[Describir el público objetivo: estudiantes, investigadores, personal técnico, etc., y los requisitos para postular.]"
     bulletpoints:
-      - "Zero JS, by default: No JavaScript runtime overhead to slow you down."
-      - "Customizable: Tailwind, MDX, and 100+ other integrations to choose from."
-      - "UI-agnostic: Supports React, Preact, Svelte, Vue, Solid, Lit and more."
+      - "[Requisito o perfil 1 por confirmar]"
+      - "[Requisito o perfil 2 por confirmar]"
     button:
       enable: true
-      label: "Get Started Now"
-      link: "https://github.com/zeon-studio/hugoplate"
+      label: "Más información"
+      link: "/sobre-el-hackathon"
 
-  - title: "The Top Reasons to Choose Hugo for Your Hugo Project"
+  - title: "Organizan y apoyan"
     image: "/images/service-3.png"
-    image_alt: "Illustration of dashboard widgets: a line graph, sliders, a progress list and a donut chart"
-    content: "With Hugo, you can build modern and content-focused websites without sacrificing performance or ease of use."
+    image_alt: "Ilustración de paneles con un gráfico de líneas, controles deslizantes y una lista de progreso"
+    content: "Organizado por [Charlas RSE en español](https://github.com/charlas-rse-espanol)."
     bulletpoints:
-      - "Instantly load static sites for better user experience and SEO."
-      - "Intuitive syntax and support for popular frameworks make learning and using Hugo a breeze."
-      - "Use any front-end library or framework, or build custom components, for any project size."
-      - "Built on cutting-edge technology to keep your projects up-to-date with the latest web standards."
+      - "[Institución anfitriona por confirmar]"
+      - "[Patrocinador o apoyo por confirmar]"
     button:
       enable: false
       label: ""

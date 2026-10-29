@@ -1,20 +1,26 @@
 ---
-title: "Hey, I am John Doe!"
-meta_title: "About"
-description: "this is meta description"
-image: "/images/image-placeholder.png"
+title: "Sobre el hackathon"
+meta_title: "Sobre el hackathon"
+description: "Detalles del Hackathon RSE Santiago 2027: fechas, lugar, programa y cómo postular."
 layout: "about"
 draft: false
 ---
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis illum nesciunt commodi vel nisi ut alias excepturi ipsum, totam, labore tempora, odit ex iste tempore sed. Fugit voluptatibus perspiciatis assumenda nulla ad nihil, omnis vel, doloremque sit quam autem optio maiores, illum eius facilis et quo consectetur provident dolor similique! Enim voluptatem dicta expedita veritatis repellat dolorum impedit, provident quasi at.
+El Hackathon RSE Santiago 2027 reúne a personas que desarrollan software para la investigación, para trabajar en equipo sobre proyectos reales y compartir buenas prácticas de Research Software Engineering (RSE).
 
-### This is a title
+### Fechas y lugar
 
-* Lorem ipsum, dolor sit amet
-* Enim voluptatem dicta expedita veritatis
-* Fugit voluptatibus perspiciatis assumenda
-* Enim voluptatem dicta expedita
-* Corporis illum nesciunt commodi vel
+* **Fechas:** [por confirmar]
+* **Lugar:** [por confirmar], Santiago de Chile
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis illum nesciunt commodi vel nisi ut alias excepturi ipsum, totam, labore tempora, odit ex iste tempore sed. Fugit voluptatibus perspiciatis assumenda nulla ad nihil, omnis vel, doloremque sit quam autem optio maiores, illum eius facilis et quo consectetur provident dolor similique! Enim voluptatem dicta expedita veritatis repellat dolorum impedit, provident quasi at. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis illum nesciunt commodi vel nisi ut alias excepturi ipsum, totam, labore tempora, odit ex iste tempore sed. Fugit voluptatibus perspiciatis assumenda nulla ad nihil, omnis vel, doloremque sit quam autem optio maiores, illum eius facilis et quo consectetur provident dolor similique! Enim voluptatem dicta expedita veritatis repellat dolorum impedit, provident quasi at.
+### Programa
+
+[Programa por confirmar.]
+
+### Cómo postular
+
+[Instrucciones y enlace al formulario de postulación por confirmar.]
+
+### Organización
+
+Organizado por [Charlas RSE en español](https://github.com/charlas-rse-espanol).
