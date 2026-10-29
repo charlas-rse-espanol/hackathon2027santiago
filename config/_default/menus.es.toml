@@ -7,13 +7,13 @@ url = "/"
 weight = 1
 
 [[main]]
-name = "Sobre el taller"
-url = "/about"
+name = "Sobre el hackathon"
+url = "/sobre-el-hackathon"
 weight = 2
 
 
 # footer menu
 [[footer]]
-name = "Sobre el taller"
-url = "/about"
+name = "Sobre el hackathon"
+url = "/sobre-el-hackathon"
 weight = 1
