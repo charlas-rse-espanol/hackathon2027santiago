@@ -1,6 +1,6 @@
-################ English language ##################
-[en]
-label = "En"
-locale = "en-us"
-contentDir = "content/english"
+################ Spanish language ##################
+[es]
+label = "Es"
+locale = "es-cl"
+contentDir = "content/spanish"
 weight = 1
