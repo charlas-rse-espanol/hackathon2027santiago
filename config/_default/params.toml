@@ -15,8 +15,8 @@ logo_text = "Hackathon RSE Santiago 2027"
 # navbar fixed to top
 navbar_fixed = true
 # theme-mode
-theme_switcher = true
-theme_default = "system" # available options [light/dark/system]
+theme_switcher = false
+theme_default = "light" # available options [light/dark/system]
 # Main Sections
 mainSections = ["sobre-el-hackathon"]
 # contact form action
@@ -37,9 +37,9 @@ preloader = "" # use jpg, png, svg or gif format.
 
 # Navigation button
 [navigation_button]
-enable = false # TODO: enable once the application form link is ready
+enable = true
 label = "Postular"
-link = ""
+link = "#" # TODO: replace with the application form URL
 
 # LLMs Configuration
 # LLMs module: https://github.com/gethugothemes/hugo-modules/tree/master/llms-txt
