@@ -21,10 +21,8 @@ defaults:
 env:
   HUGO_ENV: production
   HUGO_VERSION: "0.158.0"
-  GO_VERSION: "1.23.3"
-  TINA_CLIENT_ID: ${{ secrets.TINA_CLIENT_ID }}
-  TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
-  TINA_SEARCH_TOKEN: ${{ secrets.TINA_SEARCH_TOKEN }}
+  GO_VERSION: "1.25.1"
+  NODE_VERSION: "22"
 
 jobs:
   # Build job
@@ -37,15 +35,22 @@ jobs:
           && sudo dpkg -i ${{ runner.temp }}/hugo.deb
 
       - name: Install Go
-        run: |
-          wget -O ${{ runner.temp }}/go.deb https://dl.google.com/go/go${GO_VERSION}.linux-amd64.tar.gz \
-          && sudo tar -C /usr/local -xzf ${{ runner.temp }}/go.deb
+        uses: actions/setup-go@v5
+        with:
+          go-version: ${{ env.GO_VERSION }}
+          cache: false
 
       - name: Checkout
         uses: actions/checkout@v4.2.2
         with:
           submodules: recursive
           fetch-depth: 0
+
+      - name: Install Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
 
       - name: Setup Pages
         id: pages
@@ -55,10 +60,12 @@ jobs:
         run: npm run project-setup
 
       - name: Install npm dependencies
-        run: npm install
+        run: npm ci
 
+      # baseURL comes from the Pages settings, e.g.
+      # https://charlas-rse-espanol.github.io/hackathon-rse-santiago-2027/
       - name: Build site
-        run: npm run build
+        run: npm run build -- --baseURL "${{ steps.pages.outputs.base_url }}/"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3.0.1
