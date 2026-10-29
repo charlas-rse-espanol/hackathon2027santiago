@@ -18,7 +18,7 @@ navbar_fixed = true
 theme_switcher = true
 theme_default = "system" # available options [light/dark/system]
 # Main Sections
-mainSections = ["blog"]
+mainSections = ["sobre-el-hackathon"]
 # contact form action
 contact_form_action = "#" # contact form works with [https://airform.io/] or [https://formspree.io]
 # google tag manager, see https://developers.google.com/tag-manager/
@@ -58,11 +58,12 @@ exclude = []
 [search]
 enable = true
 primary_color = "#121212"
-include_sections = ["blog"]
+include_sections = [] # empty = use mainSections
+include_list_pages = true
 show_image = true
 show_description = true
-show_tags = true
-show_categories = true
+show_tags = false
+show_categories = false
 
 # announcement
 # announcement module: https://github.com/gethugothemes/hugo-modules/tree/master/components/announcement
