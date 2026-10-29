@@ -7,7 +7,7 @@ description: "Las postulaciones abrirán pronto. Revisa los detalles del hackath
 button:
   enable: true
   label: "Sobre el hackathon"
-  link: "/sobre-el-hackathon"
+  link: "sobre-el-hackathon/"
 
 # don't create a separate page
 build:

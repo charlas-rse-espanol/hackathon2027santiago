@@ -3,17 +3,17 @@
 # main menu
 [[main]]
 name = "Inicio"
-url = "/"
+pageRef = "/"
 weight = 1
 
 [[main]]
 name = "Sobre el hackathon"
-url = "/sobre-el-hackathon"
+pageRef = "/sobre-el-hackathon"
 weight = 2
 
 
 # footer menu
 [[footer]]
 name = "Sobre el hackathon"
-url = "/sobre-el-hackathon"
+pageRef = "/sobre-el-hackathon"
 weight = 1

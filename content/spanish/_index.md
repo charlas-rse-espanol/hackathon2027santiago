@@ -8,7 +8,7 @@ banner:
   button:
     enable: true
     label: "Más información"
-    link: "/sobre-el-hackathon"
+    link: "sobre-el-hackathon/"
 
 # Features
 features:
@@ -35,7 +35,7 @@ features:
     button:
       enable: true
       label: "Más información"
-      link: "/sobre-el-hackathon"
+      link: "sobre-el-hackathon/"
 
   - title: "Organizan y apoyan"
     image: "/images/service-3.png"
