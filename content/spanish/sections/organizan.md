@@ -4,7 +4,7 @@ title: "Organizan"
 
 organizations:
   - name: "Charlas RSE en español"
-    logo: "/images/charlas-logo-transparente.png"
+    logo: "/images/charlas-logo.svg"
     link: "https://charlas-rse-espanol.github.io/"
 
   - name: "RSE Chile"
