@@ -75,7 +75,14 @@
             </ul>
             {{ with .button }}
               {{ if .enable }}
-                <a class="btn btn-primary mt-6" href="{{ .link | absURL }}">
+                {{/* an empty link uses the application form URL from params.toml */}}
+                {{ $link := .link | default site.Params.navigation_button.link }}
+                <a
+                  class="btn btn-primary mt-6"
+                  href="{{ $link | absURL }}"
+                  {{ if strings.HasPrefix $link `http` }}
+                    target="_blank" rel="noopener"
+                  {{ end }}>
                   {{ .label }}
                   <i class="fa fa-arrow-right pl-2"></i>
                 </a>

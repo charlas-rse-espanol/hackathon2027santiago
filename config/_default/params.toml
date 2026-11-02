@@ -39,6 +39,8 @@ preloader = "" # use jpg, png, svg or gif format.
 [navigation_button]
 enable = true
 label = "Postular"
+# application form URL; also used by the home page "Postula" button
+# (when its link is empty) and by the {{< postular >}} shortcode
 link = "#" # TODO: replace with the application form URL
 
 # LLMs Configuration

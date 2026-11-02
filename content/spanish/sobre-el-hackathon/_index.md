@@ -19,7 +19,7 @@ El Hackathon RSE Santiago 2027 reúne a personas que desarrollan software para l
 
 ### Cómo postular
 
-[Instrucciones y enlace al formulario de postulación por confirmar.]
+[Instrucciones por confirmar.] Postula a través del {{< postular >}}.
 
 ### Organización
 

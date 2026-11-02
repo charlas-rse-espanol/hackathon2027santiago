@@ -44,6 +44,7 @@ features:
       - "[Requisito o perfil 2 por confirmar]"
     button:
       enable: true
-      label: "Más información"
-      link: "sobre-el-hackathon/"
+      label: "Postula"
+      # empty = the application form URL (navigation_button.link in config/_default/params.toml)
+      link: ""
 ---
