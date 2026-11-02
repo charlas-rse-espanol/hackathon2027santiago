@@ -4,7 +4,7 @@
     <section class="section home-banner pt-14">
       <div class="container">
         <div class="row justify-center">
-          <div class="home-text lg:col-7 md:col-9 mb-8 text-center">
+          <div class="home-text lg:col-7 md:col-9 mb-7 text-center">
             {{ $rw := .title_rewrite }}
             {{ if and $rw (strings.Contains .title $rw.word) }}
               {{/* the word is deleted and re-typed in cursive by the script below */}}
@@ -63,20 +63,30 @@
               {{ .content | markdownify }}
             </p>
             {{ with .details }}
-              <p class="text-text-light dark:text-darkmode-text-light mb-8 text-lg md:text-xl">
+              {{/* mb-4 + the text block's mb-7 = the gap above the image */}}
+              <p class="text-text-light dark:text-darkmode-text-light mb-4 text-lg md:text-xl">
                 {{ range $i, $line := . }}
                   {{ if $i }}<br />{{ end }}
                   {{ $line | markdownify }}
                 {{ end }}
               </p>
             {{ end }}
-            {{ with .button }}
-              {{ if .enable }}
-                {{/* a "#..." link jumps to a section on this page */}}
-                {{ $link := .link }}
-                {{ if not (strings.HasPrefix $link `#`) }}
-                  {{ $link = $link | absURL }}
-                {{ end }}
+          </div>
+          {{ with .image }}
+            <div class="col-12">
+              {{/* image modules comes from https://github.com/gethugothemes/hugo-modules/tree/master/images */}}
+              {{ partial "image" (dict "Src" . "Alt" ($.Params.banner.image_alt | default "Banner image") "Loading" "eager" "Class" "mx-auto rounded-2xl lg:!max-w-[800px]" "DisplayXL" "800x" ) }}
+            </div>
+          {{ end }}
+          {{/* button goes under the image */}}
+          {{ with .button }}
+            {{ if .enable }}
+              {{/* a "#..." link jumps to a section on this page */}}
+              {{ $link := .link }}
+              {{ if not (strings.HasPrefix $link `#`) }}
+                {{ $link = $link | absURL }}
+              {{ end }}
+              <div class="col-12 mt-8 text-center">
                 <a
                   class="btn btn-primary"
                   href="{{ $link }}"
@@ -85,14 +95,8 @@
                   {{ end }}>
                   {{ .label }}
                 </a>
-              {{ end }}
+              </div>
             {{ end }}
-          </div>
-          {{ with .image }}
-            <div class="col-12">
-              {{/* image modules comes from https://github.com/gethugothemes/hugo-modules/tree/master/images */}}
-              {{ partial "image" (dict "Src" . "Alt" ($.Params.banner.image_alt | default "Banner image") "Loading" "eager" "Class" "mx-auto rounded-2xl lg:!max-w-[800px]" "DisplayXL" "800x" ) }}
-            </div>
           {{ end }}
         </div>
       </div>

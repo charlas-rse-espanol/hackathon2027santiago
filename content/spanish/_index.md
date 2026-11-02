@@ -18,10 +18,10 @@ banner:
   image_alt: "Edificio del Campus San Joaquín de la Pontificia Universidad Católica de Chile, con árboles y césped"
   button:
     enable: true
-    label: "-> Más información"
+    label: "↓ Más información"
     # "#..." jumps to the feature with that id below
     link: "#que-es"
-  # smaller text above the button, one line per item
+  # smaller text under the banner content, one line per item
   details:
     - "📍 Santiago de Chile, 12 - 14 enero 2027"
     - "Campus San Joaquín (UC Chile)"
