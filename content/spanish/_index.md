@@ -17,7 +17,7 @@ banner:
   image_alt: "Ilustración de una persona trabajando con un computador portátil en un escritorio"
   button:
     enable: true
-    label: "-> más información"
+    label: "-> Más información"
     # "#..." jumps to the feature with that id below
     link: "#que-es"
   # smaller text above the button, one line per item
@@ -58,6 +58,6 @@ features:
 # Centred button shown below the features
 more_info_button:
   enable: true
-  label: "-> Sobre el hackathon"
+  label: "-> Más sobre el hackathon"
   link: "sobre-el-hackathon/"
 ---
