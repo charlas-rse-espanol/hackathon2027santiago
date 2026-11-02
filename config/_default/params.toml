@@ -55,18 +55,6 @@ include = []
 # Exclude specific paths (same wildcard formats as include). Include takes priority on conflicts.
 exclude = []
 
-# search
-# search module: https://github.com/gethugothemes/hugo-modules/tree/master/search
-[search]
-enable = true
-primary_color = "#121212"
-include_sections = [] # empty = use mainSections
-include_list_pages = true
-show_image = true
-show_description = true
-show_tags = false
-show_categories = false
-
 # announcement
 # announcement module: https://github.com/gethugothemes/hugo-modules/tree/master/components/announcement
 [announcement]

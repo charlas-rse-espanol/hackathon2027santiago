@@ -19,7 +19,6 @@ require (
 	github.com/gethugothemes/hugo-modules/llms-txt v0.0.0-20260514051712-1e119c418ea0 // indirect
 	github.com/gethugothemes/hugo-modules/modal v0.0.0-20260514051712-1e119c418ea0 // indirect
 	github.com/gethugothemes/hugo-modules/pwa v0.0.0-20260514051712-1e119c418ea0 // indirect
-	github.com/gethugothemes/hugo-modules/search v0.0.0-20260514051712-1e119c418ea0 // indirect
 	github.com/gethugothemes/hugo-modules/seo-tools/basic-seo v0.0.0-20260514051712-1e119c418ea0 // indirect
 	github.com/gethugothemes/hugo-modules/seo-tools/google-tag-manager v0.0.0-20260514051712-1e119c418ea0 // indirect
 	github.com/gethugothemes/hugo-modules/seo-tools/site-verifications v0.0.0-20260514051712-1e119c418ea0 // indirect
