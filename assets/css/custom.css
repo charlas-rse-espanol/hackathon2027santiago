@@ -91,6 +91,29 @@
   background-color: var(--color-primary);
 }
 
+/* Banner title word that is deleted and re-typed in cursive (layouts/home.html) */
+.title-rewrite::after {
+  content: "";
+  display: inline-block;
+  width: 3px;
+  height: 0.9em;
+  margin-left: 2px;
+  vertical-align: -0.1em;
+  background-color: var(--color-primary);
+  animation: title-cursor-blink 1s step-end infinite;
+}
+.title-rewrite.is-cursive .title-rewrite-text {
+  font-family: "Caveat", cursive;
+  font-size: 1.25em;
+  line-height: 1;
+  color: var(--color-primary);
+}
+@keyframes title-cursor-blink {
+  50% {
+    opacity: 0;
+  }
+}
+
 /* Coral check icons in the feature bullet lists */
 .home-text .fa-check {
   color: var(--color-primary);

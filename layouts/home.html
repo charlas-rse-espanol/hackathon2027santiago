@@ -5,9 +5,60 @@
       <div class="container">
         <div class="row justify-center">
           <div class="home-text lg:col-7 md:col-9 mb-8 text-center">
-            <h1 class="mb-4 text-h3 lg:text-h1">
-              {{ .title | markdownify }}
-            </h1>
+            {{ $rw := .title_rewrite }}
+            {{ if and $rw (strings.Contains .title $rw.word) }}
+              {{/* the word is deleted and re-typed in cursive by the script below */}}
+              {{ $parts := split .title $rw.word }}
+              <link
+                rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap" />
+              <h1 class="mb-4 text-h3 lg:text-h1" aria-label="{{ .title }}">
+                <span aria-hidden="true"
+                  >{{ index $parts 0 }}<span
+                    class="title-rewrite"
+                    data-from="{{ $rw.word }}"
+                    data-to="{{ $rw.to }}"
+                    ><span class="title-rewrite-text">{{ $rw.word }}</span></span
+                  >{{ delimit (after 1 $parts) $rw.word }}</span
+                >
+              </h1>
+              <script>
+                (function () {
+                  var el = document.querySelector(".title-rewrite");
+                  var text = el.querySelector(".title-rewrite-text");
+                  var words = [el.dataset.from, el.dataset.to];
+                  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+                    text.textContent = words[1];
+                    el.classList.add("is-cursive");
+                    return;
+                  }
+                  function wait(ms) {
+                    return new Promise(function (r) { setTimeout(r, ms); });
+                  }
+                  var idx = 0;
+                  (async function loop() {
+                    while (true) {
+                      await wait(idx ? 2500 : 1800);
+                      while (text.textContent.length) {
+                        text.textContent = text.textContent.slice(0, -1);
+                        await wait(70);
+                      }
+                      idx = 1 - idx;
+                      el.classList.toggle("is-cursive", idx === 1);
+                      await wait(300);
+                      for (var k = 1; k <= words[idx].length; k++) {
+                        text.textContent = words[idx].slice(0, k);
+                        await wait(110);
+                      }
+                    }
+                  })();
+                })();
+              </script>
+            {{ else }}
+              <h1 class="mb-4 text-h3 lg:text-h1">
+                {{ .title | markdownify }}
+              </h1>
+            {{ end }}
             <p class="mb-8 text-xl md:text-2xl">
               {{ .content | markdownify }}
             </p>
