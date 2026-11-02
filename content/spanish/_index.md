@@ -29,8 +29,8 @@ banner:
 features:
   - title: "¿Qué es el Hackathon RSE?"
     id: "que-es"
-    image: "/images/service-1.png"
-    image_alt: "Ilustración de tarjetas de interfaz: un reproductor de video, gráficos de barras y controles deslizantes"
+    image: "/images/que-es.svg"
+    image_alt: "Símbolos de un archivo de código, la línea de comandos y el control de versiones"
     content: ""
     bulletpoints:
       - "Un ***hackathon*** es un encuentro de duración limitada en el que equipos de participantes trabajan de forma intensiva para desarrollar una idea o resolver un reto concreto, normalmente programando. "
@@ -42,8 +42,8 @@ features:
       link: ""
 
   - title: "¿Quién puede participar?"
-    image: "/images/service-2.png"
-    image_alt: "Ilustración de tarjetas con gráficos de barras, un gráfico de anillo y un gráfico de líneas"
+    image: "/images/quien.svg"
+    image_alt: "Símbolo de un grupo de personas"
     content: "Nos gusta la variedad: buscamos participantes con diversidad de trayectorias y experiencias. Si escribes código en el contexto de proyectos de investigación, ya eres parte de la comunidad RSE, ¡aunque no lo sepas!"
     bulletpoints:
       - "Estudiantes de postgrado"
