@@ -112,13 +112,6 @@ rel = "manifest"
 
 # CSS Plugins
 [[params.plugins.css]]
-link = "plugins/swiper/swiper-bundle.css" # https://github.com/gethugothemes/hugo-modules/tree/master/gallery-slider
-lazy = true
-[[params.plugins.css]]
-link = "plugins/glightbox/glightbox.css" 
-# https://github.com/gethugothemes/hugo-modules/tree/master/gallery-slider
-lazy = true
-[[params.plugins.css]]
 link = "plugins/font-awesome/v6/brands.css" 
 # https://github.com/gethugothemes/hugo-modules/tree/master/icons/font-awesome
 lazy = true
@@ -130,16 +123,6 @@ link = "plugins/font-awesome/v6/icons.css"
 lazy = true
 
 # JS Plugins
-[[params.plugins.js]]
-link = "plugins/swiper/swiper-bundle.js" 
-# https://github.com/gethugothemes/hugo-modules/tree/master/gallery-slider
-lazy = false
-[[params.plugins.js]]
-link = "plugins/glightbox/glightbox.js" # https://github.com/gethugothemes/hugo-modules/tree/master/gallery-slider
-lazy = true
-[[params.plugins.js]]
-link = "js/gallery-slider.js" # https://github.com/gethugothemes/hugo-modules/tree/master/gallery-slider
-lazy = true
 [[params.plugins.js]]
 link = "plugins/cookie.js" # https://github.com/gethugothemes/hugo-modules/tree/master/components/cookie-consent
 lazy = false

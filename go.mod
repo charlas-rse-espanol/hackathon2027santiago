@@ -12,7 +12,6 @@ require (
 	github.com/gethugothemes/hugo-modules/components/preloader v0.0.0-20260514051712-1e119c418ea0 // indirect
 	github.com/gethugothemes/hugo-modules/components/render-link v0.0.0-20260514051712-1e119c418ea0 // indirect
 	github.com/gethugothemes/hugo-modules/components/social-share v0.0.0-20260514051712-1e119c418ea0 // indirect
-	github.com/gethugothemes/hugo-modules/gallery-slider v0.0.0-20260514051712-1e119c418ea0 // indirect
 	github.com/gethugothemes/hugo-modules/gzip-caching v0.0.0-20260514051712-1e119c418ea0 // indirect
 	github.com/gethugothemes/hugo-modules/icons/font-awesome v0.0.0-20260514051712-1e119c418ea0 // indirect
 	github.com/gethugothemes/hugo-modules/images v0.0.0-20260514051712-1e119c418ea0 // indirect

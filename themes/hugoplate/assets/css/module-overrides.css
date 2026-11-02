@@ -57,8 +57,3 @@
 .cookie-box {
   @apply !rounded-lg;
 }
-
-/* slider */
-.gallery-slider {
-  @apply !ml-0;
-}

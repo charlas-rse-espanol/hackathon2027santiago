@@ -43,9 +43,6 @@ path = "github.com/gethugothemes/hugo-modules/tab"
 path = "github.com/gethugothemes/hugo-modules/modal"
 
 [[imports]]
-path = "github.com/gethugothemes/hugo-modules/gallery-slider"
-
-[[imports]]
 path = "github.com/gethugothemes/hugo-modules/components/preloader"
 
 [[imports]]
