@@ -1,125 +1,44 @@
-<h1 align="center">Hugo + Tailwind CSS Starter and Boilerplate</h1>
+# Hackathon RSE Santiago 2027
 
-<p align="center">Hugoplate is a free starter template built with Hugo and Tailwind CSS v4.0, providing everything you need to jumpstart your Hugo project and save valuable time.</p>
+Website for the Hackathon RSE Santiago 2027, a hackathon for people who develop research software, held in Santiago de Chile. It is organised by [Charlas RSE en español](https://charlas-rse-espanol.github.io/), [RSE Chile](https://rse-chile.github.io/) and [RSE Argentina](https://rse-argentina.github.io/).
 
-<p align="center">Made with ♥ by <a href="https://zeon.studio/"> Zeon Studio</a></p>
-<p align=center> If you find this project useful, please give it a ⭐ to show your support.</p>
+The site is in Spanish. It is built with [Hugo](https://gohugo.io/) and [Tailwind CSS v4](https://tailwindcss.com/), on top of the [Hugoplate](https://github.com/zeon-studio/hugoplate) theme.
 
-<h2 align="center"> <a target="_blank" href="https://zeon.studio/preview?project=hugoplate" rel="nofollow">👀 Demo</a> | <a  target="_blank" href="https://pagespeed.web.dev/analysis/https-hugoplate-netlify-app/6lyxjw6t4r?form_factor=desktop">Page Speed (95+)🚀</a> |   <a target="_blank" href="https://app.sitepins.com/new/clone?name=Hugoplate&repository=https://github.com/zeon-studio/hugoplate?aff=hugoplate">
-    <img src="https://sitepins.com/button.svg" alt="One Click Deploy With Sitepins">
-  </a>
-</h2>
+## Editing the home page
 
-<p align="center">
-  <a href="https://github.com/gohugoio/hugo/releases/tag/v0.158.0" alt="Contributors">
-    <img alt="hugo version" src="https://img.shields.io/static/v1?label=min-HUGO-version&message=0.158.0&color=f00&logo=hugo" />
-  </a>
+The home page content is in Markdown front matter under [`content/spanish/`](content/spanish/). Each section of the page reads from one file:
 
-  <a href="https://github.com/zeon-studio/hugoplate/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/zeon-studio/hugoplate" alt="license">
-  </a>
+| Home page section | File to edit |
+| --- | --- |
+| Banner (title, intro text, image, "Más información" button) | [`content/spanish/_index.md`](content/spanish/_index.md), under `banner:` |
+| Feature blocks ("¿Qué es el Hackathon RSE?", "¿Quién puede participar?") | [`content/spanish/_index.md`](content/spanish/_index.md), under `features:` (each `- title:` is one block; add or remove blocks as needed) |
+| Organisers ("Organizan") logos | [`content/spanish/sections/organizan.md`](content/spanish/sections/organizan.md) |
+| Supporters ("Apoyos") logos | [`content/spanish/sections/apoyos.md`](content/spanish/sections/apoyos.md) |
+| Host ("Anfitrión") logo | [`content/spanish/sections/anfitrion.md`](content/spanish/sections/anfitrion.md) |
 
-  <a href="https://github.com/zeon-studio/hugoplate">
-    <img src="https://img.shields.io/github/languages/code-size/zeon-studio/hugoplate" alt="code size">
-  </a>
+Notes:
 
-  <a href="https://github.com/zeon-studio/hugoplate/graphs/contributors">
-    <img src="https://img.shields.io/github/contributors/zeon-studio/hugoplate" alt="contributors">
-  </a>
-</p>
+- Images referenced as `/images/...` (for example `banner.png` or the organisation logos) live in [`assets/images/`](assets/images/).
+- The layout and order of the sections are set in [`layouts/home.html`](layouts/home.html), and the logo sections are drawn by [`layouts/_partials/organizations.html`](layouts/_partials/organizations.html). You only need to touch these to change the structure or order, not the text.
+- The header menu, footer and site title come from [`config/_default/`](config/_default/) (`menus.es.toml`, `params.toml`) and [`hugo.toml`](hugo.toml), not from the home page files.
 
-## Table of Contents
+## Other content
 
-- [What's Included](#-whats-included)
-  - [Key Features](#-key-features)
-  - [15+ Pre-designed Pages](#-15-pre-designed-pages)
-- [Tech Stack](#-tech-stack)
-- [Getting Started](#-getting-started)
-  - [Prerequisites](#-prerequisites)
-  - [Project Setup](#-project-setup)
-  - [Install Dependencies](#-install-dependencies)
-  - [Development Command](#-development-command)
-- [Customization](#-customization)
-  - [Site Config](#-site-config)
-  - [Site Params](#-site-params)
-  - [Colors and Fonts](#-colors-and-fonts)
-  - [Social Links](#-social-links)
-- [Advanced Usage](#-advanced-usage)
-- [Build And Deploy](#-build-and-deploy)
-- [Guide to Staying Compliant](#-guide-to-staying-compliant)
-- [Showcase](#-showcase)
-- [Need Customization?](#-need-customization)
+- The "Sobre el hackathon" page (dates, venue, programme, how to apply) is in [`content/spanish/sobre-el-hackathon/_index.md`](content/spanish/sobre-el-hackathon/_index.md).
+- Colours and fonts are set in [`data/theme.json`](data/theme.json).
+- Logo, favicon, SEO metadata and other site parameters are in [`config/_default/params.toml`](config/_default/params.toml).
 
-## 🎁 What's Included
+## Running the site locally
 
-We have included almost everything you need to start your Hugo project. Let's see what's included in this template:
+### Prerequisites
 
-### 📌 Key Features
-
-- 👥 Multi-Authors
-- 🎯 Similar Posts Suggestion
-- 🔍 Search Functionality
-- 🌑 Dark Mode
-- 🏷️ Tags & Categories
-- 🔗 Netlify setting pre-configured
-- 📞 Support contact form
-- 📱 Fully responsive
-- 📝 Write and update content in Markdown
-- 💬 Open-Remark Comment
-- 🔳 Syntax Highlighting
-
-### 📄 15+ Pre-designed Pages
-
-- 🏠 Homepage
-- 👤 About
-- 📞 Contact
-- 👥 Authors
-- 👤 Author Single
-- 📝 Blog
-- 📝 Blog Single
-- 🚫 Custom 404
-- 💡 Elements
-- 📄 Privacy Policy
-- 🏷️ Tags
-- 🏷️ Tag Single
-- 🗂️ Categories
-- 🗂️ Category Single
-- 🔍 Search
-
-### 📦 Tech Stack
-
-- [Hugo](https://gohugo.io/)
-- [Tailwind CSS v4.0](https://tailwindcss.com/)
-- [AutoPrefixer](https://autoprefixer.github.io/)
-- [Hugo Modules](https://gohugo.io/hugo-modules/) by [Gethugothemes](https://gethugothemes.com/hugo-modules)
-- [Markdown](https://markdownguide.org/)
-- [Prettier](https://prettier.io/)
-- [Jshint](https://jshint.com/)
-- [Netlify](https://www.netlify.com/)
-- [Vercel](https://vercel.com/)
-- [Github Actions](https://github.com/features/actions)
-- [Gitlab Ci](https://docs.gitlab.com/ee/ci/)
-- [AWS Amplify](https://aws.amazon.com/amplify/)
-
----
-
-## 🚀 Getting Started
-
-First you need to [clone](https://github.com/zeon-studio/hugoplate) or [download](https://github.com/zeon-studio/hugoplate/archive/refs/heads/main.zip) the template repository, and then let's get started with the following process:
-
-### ⚙ Prerequisites
-
-To start using this template, you need to have some prerequisites installed on your machine.
-
-- [Hugo Extended](https://gohugo.io/installation/), **exactly** the version set as `HUGO_VERSION` in `netlify.toml` (currently `0.158.0`)
+- [Hugo Extended](https://gohugo.io/installation/), **exactly** the version set as `HUGO_VERSION` in [`netlify.toml`](netlify.toml) (currently `0.158.0`)
 - [Node v22+](https://nodejs.org/en/download/)
-- [Go v1.24+](https://go.dev/doc/install)
+- [Go v1.24+](https://go.dev/doc/install) (used by Hugo Modules)
 
 This project uses **npm** as its package manager.
 
-#### Installing the pinned Hugo version with mise
-
-Homebrew and most package managers only install the latest Hugo. To get the exact version this project needs, use [mise](https://mise.jdx.dev/), which reads the version pinned in `mise.toml`:
+Homebrew and most package managers only install the latest Hugo. To get the exact version this project needs, use [mise](https://mise.jdx.dev/), which reads the version pinned in [`mise.toml`](mise.toml):
 
 ```bash
 brew install mise                # or see https://mise.jdx.dev/getting-started.html
@@ -128,170 +47,33 @@ mise install                     # run from the repository root
 hugo version                     # should print v0.158.0+extended
 ```
 
-### 👉 Project Setup
+### Commands
 
-This repository has already been converted with this script, so you can skip this step (running it again is harmless).
+Always use these npm scripts rather than running `hugo` directly, because they also regenerate the theme CSS.
 
-We built this custom script to make your project setup easier. It will create a new Hugo theme folder and clone the Hugoplate theme into it. Then move the exampleSite folder into the root directory. So that you can start your Hugo server without going into the exampleSite folder. Use the following command to setup your project.
+| Command | Use |
+| --- | --- |
+| `npm install` | Install dependencies (first run, or after pulling changes) |
+| `npm run dev` | Development server with live reload, at <http://localhost:1313> |
+| `npm run build` | Production build to `public/` |
+| `npm run preview` | Production-flavoured local server |
 
-```bash
-npm run project-setup
-```
-
-### 👉 Install Dependencies
-
-Install all the dependencies using the following command.
-
-```bash
-npm install
-```
-
-### 👉 Development Command
-
-Start the development server using the following command.
+After changing content or layouts, restart the development server if the changes don't show up:
 
 ```bash
-npm run dev
+npx kill-port 1313 -y && npm run dev
 ```
 
-### 🎬 Still Confused? Watch a Quick Video
+## Repository structure
 
-https://github.com/zeon-studio/hugoplate/assets/58769763/c260c0ae-91be-42ce-b8db-aa7f11f777bd
+The site lives at the repository root and the Hugoplate theme is vendored in [`themes/hugoplate/`](themes/hugoplate/). Files in the root [`layouts/`](layouts/) override the theme's templates of the same name, so make template changes there and leave `themes/hugoplate/` untouched.
 
----
+This repository has already been converted to this structure with `npm run project-setup`. Running it again is harmless.
 
-## 📝 Customization
+## Deployment
 
-This template has been designed with a lot of customization options in mind. You can customize almost anything you want, including:
+Pushing to `main` builds the site and deploys it to GitHub Pages, using the workflow in [`.github/workflows/main.yml`](.github/workflows/main.yml).
 
-### 👉 Site Config
+## Credits and licence
 
-You can change the site title, base URL, language, theme, plugins, and more from the `hugo.toml` file.
-
-### 👉 Site Params
-
-You can customize all the parameters from the `config/_default/params.toml` file. This includes the logo, favicon, search, SEO metadata, and more.
-
-### 👉 Colors and Fonts
-
-You can change the colors and fonts from the `data/theme.json` file. This includes the primary color, secondary color, font family, and font size.
-
-### 👉 Social Links
-
-You can change the social links from the `data/social.json` file. Add your social links here, and they will automatically be displayed on the site.
-
----
-
-## 🛠 Advanced Usage
-
-We have added some custom scripts to make your life easier. You can use these scripts to help you with your development.
-
-### 👉 Update Theme
-
-If you want to update the theme, then you can use the following command. It will update the theme to the latest version.
-
-```bash
-npm run update-theme
-```
-
-> **Note:** This command will work after running the `project-setup` script.
-
-### 👉 Update Modules
-
-We have added a lot of modules to this template. You can update all the modules using the following command.
-
-```bash
-npm run update-modules
-```
-
-### 👉 Remove Dark Mode
-
-If you want to remove dark mode from your project, you can use the following command to remove dark mode from your project.
-
-```bash
-npm run remove-darkmode
-```
-
-> **Note:** This command will work before running the `project-setup` script. If you have already run the `project-setup` command, then you have to run `npm run theme-setup` first, and then you can run this command. Afterward, you can run `npm run project-setup` again.
-
-### 👉 Remove Multilingual
-
-If you want to remove multilingual from your project, you can use the following command to remove multilingual from your project.
-
-```bash
-npm run remove-multilang
-```
-
-> **Note:** This command will work before running the `project-setup` script. If you have already run the `project-setup` command, then you have to run `npm run theme-setup` first, and then you can run this command. Afterward, you can run `npm run project-setup` again.
-
----
-
-## 🚀 Build And Deploy
-
-After you finish your development, you can build or deploy your project almost everywhere. Let's see the process:
-
-### 👉 Build Command
-
-To build your project locally, you can use the following command.
-
-```bash
-npm run build
-```
-
-### 👉 Deploy Site
-
-We have provided 5 different deploy platform configurations with this template, so you can deploy easily.
-
-- [Netlify](https://www.netlify.com/)
-- [Vercel](https://vercel.com/)
-- [Github Actions](https://github.com/features/actions)
-- [Gitlab Ci](https://docs.gitlab.com/ee/ci/)
-- [AWS Amplify](https://aws.amazon.com/amplify/)
-
-And if you want to host some other hosting platforms. Then you can build your project, and you will get a `public` folder. that you can copy and paste on your hosting platform.
-
-> **Note:** You must change the `baseURL` in the `hugo.toml` file. Otherwise, your site will not work properly.
-
----
-
-<!-- edit with sitepins -->
-
-## 📝 Edit Content with CMS
-
-This template comes pre-configured with [**Sitepins**](https://sitepins.com?aff=hugoplate), a Git-based Headless CMS designed for seamless content management. You can update your website’s text, images, and configuration without touching a single line of code.
-
-**How to get started:**
-
-Click the Edit with Sitepins button below and follow the on-screen instructions to start editing your content visually.
-
-  <a target="_blank" href="https://app.sitepins.com/new/clone?name=Hugoplate&repository=https://github.com/zeon-studio/hugoplate?aff=hugoplate">
-    <img src="https://sitepins.com/button.svg" alt="Edit with Sitepins">
-  </a>
-
-## 🔒 Guide to Staying Compliant
-
-### 🐞 Reporting Issues
-
-We use GitHub Issues as the official bug tracker for this Template. Please search [existing issues](https://github.com/zeon-studio/hugoplate/issues). Someone may have already reported the same problem.
-If your problem or idea has not been addressed yet, feel free to [open a new issue](https://github.com/zeon-studio/hugoplate/issues).
-
-### 📝 License
-
-Copyright (c) 2023 - Present, Designed & Developed by [Zeon Studio](https://zeon.studio/)
-
-**Code License:** Released under the [MIT](https://github.com/zeon-studio/hugoplate/blob/main/LICENSE) license.
-
-**Image license:** The images are only for demonstration purposes. They have their license, we don't have permission to share those images.
-
----
-
-## 🌠 Showcase
-
-List of some projects people are building with [**Hugoplate**!](https://github.com/zeon-studio/hugoplate/discussions/207)
-Don't forget to add yours.
-
----
-
-## 💻 Need Customization?
-
-If you need a custom theme, theme customization, or complete website development services from scratch, you can [Hire Us](https://zeon.studio/estimate-project).
+The site is based on [Hugoplate](https://github.com/zeon-studio/hugoplate) by [Zeon Studio](https://zeon.studio/), released under the [MIT licence](LICENSE).
