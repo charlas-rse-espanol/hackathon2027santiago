@@ -11,7 +11,7 @@ banner:
   # the word in the title that is deleted and re-typed in cursive, on a loop
   title_rewrite:
     word: "Hackathon"
-    to: "hackatón"
+    to: "Hackatón"
   content: "Descubre de qué va la **ingeniería de software de investigación** con mini-proyectos en grupo."
   image: "/images/banner.png"
   image_alt: "Ilustración de una persona trabajando con un computador portátil en un escritorio"
