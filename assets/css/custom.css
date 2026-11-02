@@ -40,3 +40,17 @@
     var(--color-darkmode-body) 100%
   );
 }
+
+/* Links inside the home page banner and feature text (layouts/home.html) */
+.home-text a:not(.btn) {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 600;
+  color: var(--color-text-dark);
+}
+.home-text a:not(.btn):hover {
+  text-decoration-thickness: 2px;
+}
+.dark .home-text a:not(.btn) {
+  color: var(--color-darkmode-text-dark);
+}

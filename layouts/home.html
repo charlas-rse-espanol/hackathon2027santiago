@@ -4,7 +4,7 @@
     <section class="section pt-14">
       <div class="container">
         <div class="row justify-center">
-          <div class="lg:col-7 md:col-9 mb-8 text-center">
+          <div class="home-text lg:col-7 md:col-9 mb-8 text-center">
             <h1 class="mb-4 text-h3 lg:text-h1">
               {{ .title | markdownify }}
             </h1>
@@ -58,7 +58,7 @@
           <div
             class="{{ if not (modBool $i 2) }}
               md:order-1
-            {{ end }} md:col-7 lg:col-6">
+            {{ end }} home-text md:col-7 lg:col-6">
             <h2 class="mb-4">
               {{ .title | markdownify }}
             </h2>
