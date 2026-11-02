@@ -1,7 +1,7 @@
 {{ define "main" }}
   <!-- Banner -->
   {{ with .Params.banner }}
-    <section class="section pt-14">
+    <section class="section home-banner pt-14">
       <div class="container">
         <div class="row justify-center">
           <div class="home-text lg:col-7 md:col-9 mb-8 text-center">
@@ -66,7 +66,7 @@
             class="{{ if not (modBool $i 2) }}
               md:order-1
             {{ end }} home-text md:col-7 lg:col-6">
-            <h2 class="mb-4">
+            <h2 class="section-title mb-6">
               {{ .title | markdownify }}
             </h2>
             <p class="mb-8 text-lg">

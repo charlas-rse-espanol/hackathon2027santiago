@@ -71,3 +71,27 @@
 .dark .btn-primary {
   color: #fff;
 }
+
+/* Soft coral wash behind the home page banner */
+.home-banner {
+  background: linear-gradient(135deg, #e86c5e22 0%, #e86c5e10 100%);
+}
+.dark .home-banner {
+  background: linear-gradient(135deg, #e86c5e18 0%, #e86c5e08 100%);
+}
+
+/* Short coral bar under the feature section headings */
+.section-title::after {
+  content: "";
+  display: block;
+  width: 75px;
+  height: 5px;
+  margin-top: 0.5rem;
+  border-radius: 9999px;
+  background-color: var(--color-primary);
+}
+
+/* Coral check icons in the feature bullet lists */
+.home-text .fa-check {
+  color: var(--color-primary);
+}
