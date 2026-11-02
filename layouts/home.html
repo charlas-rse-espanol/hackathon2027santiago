@@ -12,7 +12,7 @@
               {{ .content | markdownify }}
             </p>
             {{ with .details }}
-              <p class="text-text-light dark:text-darkmode-text-light mb-8">
+              <p class="text-text-light dark:text-darkmode-text-light mb-8 text-lg md:text-xl">
                 {{ range $i, $line := . }}
                   {{ if $i }}<br />{{ end }}
                   {{ $line | markdownify }}
