@@ -90,6 +90,11 @@
   border-radius: 9999px;
   background-color: var(--color-primary);
 }
+/* centred version of the bar, for the page title in layouts/about.html */
+.section-title-center::after {
+  margin-left: auto;
+  margin-right: auto;
+}
 
 /* Banner title word that is deleted and re-typed in cursive (layouts/home.html) */
 .title-rewrite::after {
