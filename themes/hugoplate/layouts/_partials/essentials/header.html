@@ -2,7 +2,7 @@
   class="header {{ if site.Params.navbar_fixed }}sticky top-0{{ end }} z-30">
   <nav class="navbar container">
     <!-- logo -->
-    <div class="order-0">
+    <div class="order-0 lg:flex-1">
       <!-- navbar brand/logo -->
       <a class="navbar-brand block" href="{{ site.Home.RelPermalink }}">
         {{/* https://github.com/gethugothemes/hugo-modules/tree/master/images */}}
@@ -115,7 +115,7 @@
       {{ end }}
     </ul>
 
-    <div class="order-1 ml-auto flex items-center md:order-2 lg:ml-0">
+    <div class="order-1 ml-auto flex items-center md:order-2 lg:ml-0 lg:flex-1 lg:justify-end">
       {{ partial "components/language-switcher" (dict "Context" . "Class" "mr-5 pl-2 py-1 dark:bg-darkmode-light rounded") }}
       {{ partial "components/theme-switcher" (dict "Class" "mr-5") }}
 
