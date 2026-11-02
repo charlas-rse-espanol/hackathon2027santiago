@@ -21,9 +21,14 @@
             {{ end }}
             {{ with .button }}
               {{ if .enable }}
+                {{/* a "#..." link jumps to a section on this page */}}
+                {{ $link := .link }}
+                {{ if not (strings.HasPrefix $link `#`) }}
+                  {{ $link = $link | absURL }}
+                {{ end }}
                 <a
                   class="btn btn-primary"
-                  href="{{ .link | absURL }}"
+                  href="{{ $link }}"
                   {{ if strings.HasPrefix .link `http` }}
                     target="_blank" rel="noopener"
                   {{ end }}>
@@ -46,7 +51,9 @@
 
   <!-- Features -->
   {{ range $i, $e:= .Params.features }}
-    <section class="section-sm {{ if (modBool $i 2) }}bg-gradient{{ end }}">
+    <section
+      {{ with .id }}id="{{ . }}"{{ end }}
+      class="section-sm {{ if (modBool $i 2) }}bg-gradient{{ end }}">
       <div class="container">
         <div class="row items-center justify-between">
           <div
@@ -92,6 +99,15 @@
         </div>
       </div>
     </section>
+  {{ end }}
+  {{ with .Params.more_info_button }}
+    {{ if .enable }}
+      <div class="container pb-14 text-center">
+        <a class="btn btn-primary" href="{{ .link | absURL }}">
+          {{ .label }}
+        </a>
+      </div>
+    {{ end }}
   {{ end }}
   <!-- /Features -->
 

@@ -13,8 +13,9 @@ banner:
   image_alt: "Ilustración de una persona trabajando con un computador portátil en un escritorio"
   button:
     enable: true
-    label: "-> Más información"
-    link: "sobre-el-hackathon/"
+    label: "-> más información"
+    # "#..." jumps to the feature with that id below
+    link: "#que-es"
   # smaller text above the button, one line per item
   details:
     - "📍 Santiago de Chile, 12 - 14 enero 2027"
@@ -23,6 +24,7 @@ banner:
 # Features
 features:
   - title: "¿Qué es el Hackathon RSE?"
+    id: "que-es"
     image: "/images/service-1.png"
     image_alt: "Ilustración de tarjetas de interfaz: un reproductor de video, gráficos de barras y controles deslizantes"
     content: ""
@@ -48,4 +50,10 @@ features:
       label: "Postula"
       # empty = the application form URL (navigation_button.link in config/_default/params.toml)
       link: ""
+
+# Centred button shown below the features
+more_info_button:
+  enable: true
+  label: "-> Sobre el hackathon"
+  link: "sobre-el-hackathon/"
 ---

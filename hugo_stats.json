@@ -159,6 +159,7 @@
       "org-block",
       "org-logo",
       "org-logo-large",
+      "pb-14",
       "pb-6",
       "pl-2",
       "pl-6",
@@ -228,6 +229,7 @@
       "nav-toggle",
       "organización",
       "programa",
+      "que-es",
       "search-modal-input",
       "show-button"
     ]
