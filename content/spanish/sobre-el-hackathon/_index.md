@@ -54,7 +54,7 @@ El hackathon tiene como público objetivo personas que están participando actua
 Las postulaciones estarán abiertas **hasta el viernes 27 de noviembre**. Los resultados se comunicarán en la semana del 7 al 11 de diciembre.
 
 
-{{< button label="-> postular" link="" style="solid" >}}
+{{< postular "-> postular" >}}
 
 <hr>
 
