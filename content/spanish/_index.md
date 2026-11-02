@@ -13,8 +13,9 @@ banner:
     word: "Hackathon"
     to: "Hackatón"
   content: "Descubre de qué va la **ingeniería de software de investigación** con mini-proyectos en grupo."
-  image: "/images/banner.png"
-  image_alt: "Ilustración de una persona trabajando con un computador portátil en un escritorio"
+  # photo: CC BY-NC-SA 2.0, credited in the footer (copyright in config/_default/params.toml)
+  image: "/images/banner-campus-san-joaquin.jpg"
+  image_alt: "Edificio del Campus San Joaquín de la Pontificia Universidad Católica de Chile, con árboles y césped"
   button:
     enable: true
     label: "-> Más información"

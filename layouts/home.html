@@ -91,7 +91,7 @@
           {{ with .image }}
             <div class="col-12">
               {{/* image modules comes from https://github.com/gethugothemes/hugo-modules/tree/master/images */}}
-              {{ partial "image" (dict "Src" . "Alt" ($.Params.banner.image_alt | default "Banner image") "Loading" "eager" "Class" "mx-auto lg:!max-w-[800px]" "DisplayXL" "800x" ) }}
+              {{ partial "image" (dict "Src" . "Alt" ($.Params.banner.image_alt | default "Banner image") "Loading" "eager" "Class" "mx-auto rounded-2xl lg:!max-w-[800px]" "DisplayXL" "800x" ) }}
             </div>
           {{ end }}
         </div>
