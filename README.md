@@ -49,6 +49,16 @@ hugo version                     # should print v0.158.0+extended
 
 ### Commands
 
+> [!IMPORTANT]
+> Before running any of the commands below, activate mise in your shell so that `hugo` resolves to the pinned 0.158.0 version:
+>
+> ```bash
+> eval "$(mise activate zsh)"
+> hugo version                     # should print v0.158.0+extended
+> ```
+>
+> Without this, your shell may pick up another Hugo installation (for example a newer version from Homebrew). The build then fails, for example with a Tailwind CSS `security.exec.allow` error.
+
 Always use these npm scripts rather than running `hugo` directly, because they also regenerate the theme CSS.
 
 | Command | Use |
