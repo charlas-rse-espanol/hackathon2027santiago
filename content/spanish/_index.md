@@ -15,6 +15,10 @@ banner:
     enable: true
     label: "Más información"
     link: "sobre-el-hackathon/"
+  # smaller text above the button, one line per item
+  details:
+    - "📍 Santiago de Chile, 12 - 14 enero 2027"
+    - "Campus San Joaquín (UC Chile)"
 
 # Features
 features:

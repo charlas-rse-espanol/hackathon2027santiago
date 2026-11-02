@@ -10,7 +10,7 @@ The home page content is in Markdown front matter under [`content/spanish/`](con
 
 | Home page section | File to edit |
 | --- | --- |
-| Banner (title, intro text, image, "Más información" button) | [`content/spanish/_index.md`](content/spanish/_index.md), under `banner:` |
+| Banner (title, intro text, date and venue, "Más información" button, image) | [`content/spanish/_index.md`](content/spanish/_index.md), under `banner:` |
 | Feature blocks ("¿Qué es el Hackathon RSE?", "¿Quién puede participar?") | [`content/spanish/_index.md`](content/spanish/_index.md), under `features:` (each `- title:` is one block; add or remove blocks as needed) |
 | Organisers ("Organizan") logos | [`content/spanish/sections/organizan.md`](content/spanish/sections/organizan.md) |
 | Supporters ("Apoyos") logos | [`content/spanish/sections/apoyos.md`](content/spanish/sections/apoyos.md) |

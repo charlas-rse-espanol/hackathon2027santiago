@@ -11,6 +11,14 @@
             <p class="mb-8 text-xl md:text-2xl">
               {{ .content | markdownify }}
             </p>
+            {{ with .details }}
+              <p class="text-text-light dark:text-darkmode-text-light mb-8">
+                {{ range $i, $line := . }}
+                  {{ if $i }}<br />{{ end }}
+                  {{ $line | markdownify }}
+                {{ end }}
+              </p>
+            {{ end }}
             {{ with .button }}
               {{ if .enable }}
                 <a
