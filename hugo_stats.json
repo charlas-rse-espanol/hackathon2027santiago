@@ -136,6 +136,7 @@
       "md:hidden",
       "md:order-1",
       "md:order-2",
+      "md:text-2xl",
       "min-h-screen",
       "ml-auto",
       "mr-1",
