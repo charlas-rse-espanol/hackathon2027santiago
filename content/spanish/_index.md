@@ -1,4 +1,12 @@
 ---
+# Home page content. This file holds the banner and feature blocks; the other
+# home page sections are in their own files (order is set in layouts/home.html):
+#   - Organizan:          sections/organizan.md
+#   - Apoyos:             sections/apoyos.md
+#   - Anfitrión:          sections/anfitrion.md
+#   - Testimonios (off):  sections/testimonial.md
+#   - Call to action (off): sections/call-to-action.md
+
 # Banner
 banner:
   title: "Hackathon RSE Santiago 2027"
