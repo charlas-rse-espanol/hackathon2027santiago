@@ -7,13 +7,13 @@
 
 # Banner
 banner:
-  title: "Hackathon RSE Santiago 2027"
-  content: "Un hackathon para quienes desarrollan software de investigación. Santiago de Chile, [fechas por confirmar] de 2027."
+  title: "Hackathon RSE 2027"
+  content: "Descubre de qué va la **ingeniería de software de investigación** con mini-proyectos en grupo."
   image: "/images/banner.png"
   image_alt: "Ilustración de una persona trabajando con un computador portátil en un escritorio"
   button:
     enable: true
-    label: "Más información"
+    label: "-> Más información"
     link: "sobre-el-hackathon/"
   # smaller text above the button, one line per item
   details:
@@ -25,11 +25,11 @@ features:
   - title: "¿Qué es el Hackathon RSE?"
     image: "/images/service-1.png"
     image_alt: "Ilustración de tarjetas de interfaz: un reproductor de video, gráficos de barras y controles deslizantes"
-    content: "Un encuentro presencial de [duración por confirmar] días en el que equipos trabajan en proyectos de software de investigación, con el apoyo de personas con experiencia en Research Software Engineering (RSE)."
+    content: ""
     bulletpoints:
-      - "[Tema o desafío 1 por confirmar]"
-      - "[Tema o desafío 2 por confirmar]"
-      - "[Tema o desafío 3 por confirmar]"
+      - "Un ***hackathon*** es un encuentro de duración limitada en el que equipos de participantes trabajan de forma intensiva para desarrollar una idea o resolver un reto concreto, normalmente programando. "
+      - "En este caso, queremos dar a conocer la profesión de ***ingeniero de software de investigación*** (o RSE por las siglas en inglés de _Research Software Engineer_), que hace referencia a los y las profesionales que desarrollan y mantienen el software usado en la investigación científica"
+      - "Esperamos reunir a participantes con perfiles y experiencias variadas. También invitaremos a ponentes de ediciones anteriores del seminario [Charlas RSE en español](https://charlas-rse-espanol.github.io/sessions/) a participar en línea. "
     button:
       enable: false
       label: ""
@@ -38,10 +38,11 @@ features:
   - title: "¿Quién puede participar?"
     image: "/images/service-2.png"
     image_alt: "Ilustración de tarjetas con gráficos de barras, un gráfico de anillo y un gráfico de líneas"
-    content: "[Describir el público objetivo: estudiantes, investigadores, personal técnico, etc., y los requisitos para postular.]"
+    content: "Nos gusta la variedad: buscamos participantes con diversidad de trayectorias y experiencias. Si escribes código en el contexto de proyectos de investigación, ya eres parte de la comunidad RSE, ¡aunque no lo sepas!"
     bulletpoints:
-      - "[Requisito o perfil 1 por confirmar]"
-      - "[Requisito o perfil 2 por confirmar]"
+      - "Estudiantes de postgrado"
+      - "Investigadores postdoctorales, personal técnico"
+      - "Con formación en ciencias, humanidades o tecnológico"
     button:
       enable: true
       label: "Postula"
