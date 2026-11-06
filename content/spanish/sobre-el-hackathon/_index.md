@@ -7,12 +7,16 @@ layout: "about"
 draft: false
 ---
 
-**¿Eres la persona encargada del trabajo con software en un proyecto de investigación?** En el contexto anglófono a esta área se la conoce como **"Research Software Engineer (RSE)" o "Ingeniería de Software de Investigación"**. Es un término reciente que busca visiblizar el hecho de que si bien investigar depende del uso de software, históricamente no ha existido un rol claramente definido para quienes se encargan de esta labor. **Suele ser un rol "oculto"** que realiza personal técnico, ayudantes, estudiantes de doctorado o postdocs, quienes muchas veces han aprendido sobre la marcha y de manera informal las habilidades técnicas necesarias. 
+**¿Eres la persona encargada del trabajo con software en un proyecto de investigación?** En el contexto anglófono a esta área se la conoce como **"Research Software Engineering (RSE)" o "Ingeniería de Software de Investigación"**. 
+
+Es un término reciente que busca visiblizar el hecho de que, si bien investigar depende cada vez más del uso de software, históricamente no ha existido un rol claramente definido para quienes se encargan de desarrollarlo. 
+
+**Suele ser un rol "oculto"** que realiza personal técnico, ayudantes, estudiantes de doctorado o investigadores postdoctorales, quienes muchas veces han aprendido sobre la marcha y de manera informal las habilidades técnicas necesarias. 
 
 
 #### ¿Qué temas se abordarán en el hackathon?
 
-Este hackathon tiene por objetivo abordar algunas de las habilidades fundacionales que usualmente se requieren al trabajar con software para investigación. Como parte de mini-proyectos, se cubrirán temas como el control de versiones con Git + GitHub, así como estrategias para asegurar la calidad y reproducibilidad de nuestros flujos de análisis de datos con Python y R. 
+Buscamos abordar las habilidades fundacionales que usualmente se requieren al trabajar con software para investigación. Como parte de mini-proyectos, se cubrirán temas como el control de versiones con Git, la colaboración en GitHub, así como estrategias para asegurar la calidad y reproducibilidad de nuestros flujos de análisis de datos. 
 
 #### ¿Qué conocimientos previos se necesitan para participar?
 
@@ -21,7 +25,7 @@ El hackathon supone cierta familiaridad con al menos un lenguaje de programació
 
 #### ¿Hay algo qué debería traer?
 
-[TODO]
+Los participantes deberán traer su propia computadora, en la que usualmente programan.
 
 #### ¿Cuándo y dónde se realizará el hackathon?
 
@@ -34,16 +38,16 @@ La participación en el hackathon es **gratuita**. Además, gracias a una subven
 
 #### ¿Puedo participar de forma online?
 
-No. Lamentablemente no tenemos capacidad para contar con participantes presenciales y online.  
+No, lamentablemente en esta ocasión no tenemos capacidad para contar con participantes presenciales y online.  
 
 
 #### ¿Quién organiza este hackathon?
 
-El hackathon es organizado por [Sofía Miñano](https://sfmig.github.io/) como parte de su Fellowship en el [Software Sustainability Institute](https://www.software.ac.uk/programmes/fellowship-programme), mentorizada por [Riva Quiroga](https://rivaquiroga.cl), y en colaboración con [Patricia Loto](https://patricia-loto.netlify.app/), [Jesica Formoso](https://jformoso.github.io/) y [Sara Acevedo](https://saryace.github.io/).
+El hackathon es organizado por [Sofía Miñano](https://sfmig.github.io/) (como parte de su Fellowship del [Software Sustainability Institute](https://www.software.ac.uk/programmes/fellowship-programme)), [Riva Quiroga](https://rivaquiroga.cl), [Patricia Loto](https://patricia-loto.netlify.app/), [Jesica Formoso](https://jformoso.github.io/) y [Sara Acevedo](https://saryace.github.io/).
 
 #### ¿Cómo me puedo inscribir?
 
-El hackathon tiene solo 20 cupos disponibles, por lo que es necesario postular. En el formulario te pediremos datos de contacto y algunos detalles más sobre tu experiencia, como información sobre tu área de investigación, tu ocupación actual, o tu experiencia en labores que impliquen el uso de código en contextos de investigación.
+El hackathon tiene solo 20 cupos disponibles, por lo que es necesario postular. En el {{< formulario >}} te pediremos datos de contacto y algunos detalles más sobre tu experiencia, como información sobre tu área de investigación, tu ocupación actual, o tu experiencia en labores que impliquen el uso de código en contextos de investigación.
 
 #### ¿Qué criterios se utilizarán para la selección?
 

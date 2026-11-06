@@ -40,7 +40,7 @@ preloader = "" # use jpg, png, svg or gif format.
 enable = true
 label = "Postular"
 # application form URL; also used by the home page "Postula" button
-# (when its link is empty) and by the {{< postular >}} shortcode
+#and by the {{< postular >}} and {{< formulario >}} shortcodes
 link = "#" # TODO: replace with the application form URL
 
 # LLMs Configuration
