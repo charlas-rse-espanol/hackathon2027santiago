@@ -49,11 +49,11 @@ features:
     bulletpoints:
       - "Estudiantes de postgrado"
       - "Investigadores postdoctorales, personal técnico"
-      - "Con formación en ciencias, humanidades o tecnológico"
+      - "Con formación en ciencias, humanidades o ingeniería"
     button:
       enable: true
-      label: "Postula"
-      # empty = the application form URL (navigation_button.link in config/_default/params.toml)
+      label: "-> Postula"
+      # if link is empty, it uses the application form URL (navigation_button.link in config/_default/params.toml)
       link: ""
 
 # Centred button shown below the features

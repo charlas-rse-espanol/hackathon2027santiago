@@ -61,7 +61,7 @@ Las postulaciones estarán abiertas **hasta el viernes 27 de noviembre**. Los re
 #### Tengo una pregunta que no aparece aquí...
 Puedes contactarnos por email en charlas.rse.espanol@gmail.com y trataremos de resolver tus dudas.
 
-{{< postular "-> postular" >}}
+{{< postular "-> Postula" >}}
 
 
 <hr>

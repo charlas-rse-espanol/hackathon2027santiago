@@ -38,7 +38,7 @@ preloader = "" # use jpg, png, svg or gif format.
 # Navigation button
 [navigation_button]
 enable = true
-label = "Postular"
+label = "-> Postula"
 # application form URL; also used by the home page "Postula" button
 #and by the {{< postular >}} and {{< formulario >}} shortcodes
 link = "#" # TODO: replace with the application form URL
