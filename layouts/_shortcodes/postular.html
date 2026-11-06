@@ -1,0 +1,10 @@
+{{- /* Button to the application form, set as navigation_button.link in config/_default/params.toml.
+  Same markup as the hugo-modules `button` shortcode (solid style).
+  Usage: {{< postular >}} or {{< postular "custom label" >}} */ -}}
+{{- $link := site.Params.navigation_button.link -}}
+<a
+  href="{{ $link | relLangURL }}"
+  class="btn btn-primary"
+  {{ if strings.HasPrefix $link `http` }}target="_blank" rel="noopener"{{ end }}>
+  {{- .Get 0 | default site.Params.navigation_button.label -}}
+</a>

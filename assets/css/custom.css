@@ -1,1 +1,125 @@
 /* Add your own custom styles here */
+
+/* Logos in the organization cards (layouts/_partials/organizations.html) */
+:root {
+  /* logo height in the cards; wide logos may stay smaller, limited by the card width */
+  --org-logo-height: 16rem;
+}
+.org-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: var(--org-logo-height);
+}
+.org-logo img {
+  max-width: 100%;
+  max-height: var(--org-logo-height);
+  width: auto;
+  object-fit: contain;
+}
+
+/* `large: true` lets a wide logo use the full card width, with no fixed height */
+.org-logo-large {
+  height: auto;
+}
+.org-logo-large img {
+  width: 100%;
+  height: auto;
+  max-height: none;
+}
+
+/* Organizan + Con el apoyo de: one solid grey block that fades to white at the end */
+.org-block {
+  background: linear-gradient(to bottom, var(--color-light) 70%, var(--color-body) 100%);
+}
+.dark .org-block {
+  background: linear-gradient(
+    to bottom,
+    var(--color-darkmode-light) 70%,
+    var(--color-darkmode-body) 100%
+  );
+}
+
+/* Links inside the home page banner and feature text (layouts/home.html) */
+.home-text a:not(.btn) {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+.home-text a:not(.btn):hover {
+  text-decoration-thickness: 2px;
+}
+
+/* Style borrowed from charlas-rse-espanol.github.io: coral accent,
+   rounded buttons that lift on hover */
+.btn {
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  transition: all 300ms;
+}
+.btn-primary {
+  color: #fff;
+}
+.btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow:
+    0 10px 15px -3px #0000001a,
+    0 4px 6px -4px #0000001a;
+}
+.dark .btn-primary {
+  color: #fff;
+}
+
+/* Soft coral wash behind the home page banner */
+.home-banner {
+  background: linear-gradient(135deg, #e86c5e22 0%, #e86c5e10 100%);
+}
+.dark .home-banner {
+  background: linear-gradient(135deg, #e86c5e18 0%, #e86c5e08 100%);
+}
+
+/* Short coral bar under the feature section headings */
+.section-title::after {
+  content: "";
+  display: block;
+  width: 75px;
+  height: 5px;
+  margin-top: 0.5rem;
+  border-radius: 9999px;
+  background-color: var(--color-primary);
+}
+/* centred version of the bar, for the page title in layouts/about.html */
+.section-title-center::after {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Banner title word that is deleted and re-typed in cursive (layouts/home.html) */
+.title-rewrite::after {
+  content: "";
+  display: inline-block;
+  width: 3px;
+  height: 0.9em;
+  margin-left: 2px;
+  vertical-align: -0.1em;
+  background-color: var(--color-primary);
+  animation: title-cursor-blink 1s step-end infinite;
+}
+.title-rewrite.is-cursive .title-rewrite-text {
+  font-family: "Caveat", cursive;
+  font-size: 1.25em;
+  line-height: 1;
+  color: var(--color-primary);
+}
+@keyframes title-cursor-blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Coral check icons in the feature bullet lists */
+.home-text .fa-check {
+  color: var(--color-primary);
+}

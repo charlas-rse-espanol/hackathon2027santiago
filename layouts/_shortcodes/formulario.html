@@ -1,0 +1,6 @@
+{{- /* Inline text link to the application form, set as navigation_button.link in config/_default/params.toml.
+  For a button, use the postular shortcode instead.
+  Usage: {{< formulario >}} or {{< formulario "custom link text" >}} */ -}}
+{{- $link := site.Params.navigation_button.link -}}
+<a href="{{ $link | relLangURL }}"{{ if strings.HasPrefix $link `http` }} target="_blank" rel="noopener"{{ end }}>{{ .Get 0 | default "formulario" }}</a>
+{{- /* trims the trailing newline so no space is added before punctuation */ -}}

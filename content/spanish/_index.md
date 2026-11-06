@@ -1,51 +1,64 @@
 ---
+# Home page content. This file holds the banner and feature blocks; the other
+# home page sections are in their own files (order is set in layouts/home.html):
+#   - Organizan: sections/organizan.md
+#   - Apoyos:    sections/apoyos.md
+#   - Anfitrión: sections/anfitrion.md
+
 # Banner
 banner:
-  title: "Hackathon RSE Santiago 2027"
-  content: "Un hackathon para quienes desarrollan software de investigación. Santiago de Chile, [fechas por confirmar] de 2027."
-  image: "/images/banner.png"
-  image_alt: "Ilustración de una persona trabajando con un computador portátil en un escritorio"
+  title: "Hackathon RSE 2027"
+  # the word in the title that is deleted and re-typed in cursive, on a loop
+  title_rewrite:
+    word: "Hackathon"
+    to: "Hackatón"
+  content: "Descubre de qué va la **ingeniería de software de investigación** con mini-proyectos en grupo."
+  # photo: CC BY-NC-SA 2.0, credited in the footer (credits in config/_default/params.toml)
+  image: "/images/banner-campus-san-joaquin.jpg"
+  image_alt: "Edificio del Campus San Joaquín de la Pontificia Universidad Católica de Chile, con árboles y césped"
   button:
     enable: true
-    label: "Más información"
-    link: "sobre-el-hackathon/"
+    label: "↓ Más información"
+    # "#..." jumps to the feature with that id below
+    link: "#que-es"
+  # smaller text under the banner content, one line per item
+  details:
+    - "📍 Santiago de Chile, 12 - 14 enero 2027"
+    - "Campus San Joaquín (UC Chile)"
 
 # Features
 features:
   - title: "¿Qué es el Hackathon RSE?"
-    image: "/images/service-1.png"
-    image_alt: "Ilustración de tarjetas de interfaz: un reproductor de video, gráficos de barras y controles deslizantes"
-    content: "Un encuentro presencial de [duración por confirmar] días en el que equipos trabajan en proyectos de software de investigación, con el apoyo de personas con experiencia en Research Software Engineering (RSE)."
+    id: "que-es"
+    image: "/images/que-es.svg"
+    image_alt: "Símbolos de un archivo de código, la línea de comandos y el control de versiones"
+    content: ""
     bulletpoints:
-      - "[Tema o desafío 1 por confirmar]"
-      - "[Tema o desafío 2 por confirmar]"
-      - "[Tema o desafío 3 por confirmar]"
+      - "Un ***hackathon*** es un encuentro de duración limitada en el que equipos de participantes trabajan de forma intensiva para desarrollar una idea o resolver un reto concreto, normalmente programando. "
+      - "En este caso, queremos dar a conocer la profesión de ***ingeniero de software de investigación*** (o RSE por las siglas en inglés de _Research Software Engineer_), que hace referencia a los y las profesionales que desarrollan y mantienen el software usado en la investigación científica"
+      - "Esperamos reunir a participantes con perfiles y experiencias variadas. También invitaremos a ponentes de ediciones anteriores del seminario [Charlas RSE en español](https://charlas-rse-espanol.github.io/sessions/) a participar en línea. "
     button:
       enable: false
       label: ""
       link: ""
 
   - title: "¿Quién puede participar?"
-    image: "/images/service-2.png"
-    image_alt: "Ilustración de tarjetas con gráficos de barras, un gráfico de anillo y un gráfico de líneas"
-    content: "[Describir el público objetivo: estudiantes, investigadores, personal técnico, etc., y los requisitos para postular.]"
+    image: "/images/quien.svg"
+    image_alt: "Símbolo de un grupo de personas"
+    content: "Nos gusta la variedad: buscamos participantes con diversidad de trayectorias y experiencias. Si escribes código en el contexto de proyectos de investigación, ya eres parte de la comunidad RSE, ¡aunque no lo sepas!"
     bulletpoints:
-      - "[Requisito o perfil 1 por confirmar]"
-      - "[Requisito o perfil 2 por confirmar]"
+      - "Estudiantes de postgrado"
+      - "Investigadores postdoctorales, personal técnico"
+      - "Con formación en ciencias, humanidades o ingeniería"
     button:
       enable: true
-      label: "Más información"
-      link: "sobre-el-hackathon/"
-
-  - title: "Organizan y apoyan"
-    image: "/images/service-3.png"
-    image_alt: "Ilustración de paneles con un gráfico de líneas, controles deslizantes y una lista de progreso"
-    content: "Organizado por [Charlas RSE en español](https://github.com/charlas-rse-espanol)."
-    bulletpoints:
-      - "[Institución anfitriona por confirmar]"
-      - "[Patrocinador o apoyo por confirmar]"
-    button:
-      enable: false
-      label: ""
+      label: "-> Postula"
+      # if link is empty, it uses the application form URL (navigation_button.link in config/_default/params.toml)
       link: ""
+
+# Centred button shown below the features
+more_info_button:
+  enable: true
+  label: "-> Más sobre el hackathon"
+  link: "sobre-el-hackathon/"
 ---
