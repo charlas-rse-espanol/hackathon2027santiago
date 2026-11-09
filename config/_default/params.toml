@@ -2,12 +2,12 @@
 # favicon module: https://github.com/gethugothemes/hugo-modules/tree/master/images#favicon-implementation
 favicon = "images/favicon.png"
 # logo module: https://github.com/gethugothemes/hugo-modules/tree/master/images#logo-implementation
-logo = "images/logo.png"
-logo_darkmode = "images/logo-darkmode.png"
+logo = "images/logo.svg"
+logo_darkmode = "" # theme_switcher is off, so no dark variant
 # use `px` or `x` with logo_width, example: "100px".
-# Note: logo_width is not work with .svg file
-logo_width = "160px"
-logo_height = "32px"
+# set only the width: Tailwind's `img { height: auto }` makes the height
+# follow the logo's own aspect ratio
+logo_width = "250px"
 # if logo_webp set false, will not generate WEBP version of logo | default is true
 logo_webp = true
 # logo text will only show when logo is missing.
@@ -19,15 +19,15 @@ theme_switcher = false
 theme_default = "light" # available options [light/dark/system]
 # Main Sections
 mainSections = ["sobre-el-hackathon"]
-# contact form action
-contact_form_action = "#" # contact form works with [https://airform.io/] or [https://formspree.io]
 # google tag manager, see https://developers.google.com/tag-manager/
 google_tag_manager = "" # example: G-XXXXXXXXXX
 google_adsense = ""     # example: ca-pub-xxxxxxxxxxxxxxxx
 # custom script on header, example: custom_script= "<script>console.log(\"Hello World\")</script>"
 custom_script = ""
 # copyright
-copyright = "Organizado por [Charlas RSE en español](https://github.com/charlas-rse-espanol) · Desarrollado con Hugo + TailwindCSS y el tema [Hugoplate](https://github.com/zeon-studio/hugoplate) de Zeon Studio"
+copyright = "Desarrollado con Hugo + TailwindCSS y el tema [Hugoplate](https://github.com/zeon-studio/hugoplate) de Zeon Studio"
+# credits for the icons and photos used on the site, shown on a second footer line
+credits = "Iconos de [Phosphor Icons](https://phosphoricons.com) (licencia MIT) · Foto: «Paseo central del Campus San Joaquín» de Sara Acevedo, [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.es), recortada"
 
 # Preloader
 # preloader module: https://github.com/gethugothemes/hugo-modules/tree/master/components/preloader
@@ -38,8 +38,10 @@ preloader = "" # use jpg, png, svg or gif format.
 # Navigation button
 [navigation_button]
 enable = true
-label = "Postular"
-link = "#" # TODO: replace with the application form URL
+label = "-> Postula"
+# application form URL; also used by the home page "Postula" button
+#and by the {{< postular >}} and {{< formulario >}} shortcodes
+link = "https://forms.gle/SjrnR4qqJLZsvU1P8"
 
 # LLMs Configuration
 # LLMs module: https://github.com/gethugothemes/hugo-modules/tree/master/llms-txt
@@ -52,18 +54,6 @@ generate_llms_full_txt = true
 include = []
 # Exclude specific paths (same wildcard formats as include). Include takes priority on conflicts.
 exclude = []
-
-# search
-# search module: https://github.com/gethugothemes/hugo-modules/tree/master/search
-[search]
-enable = true
-primary_color = "#121212"
-include_sections = [] # empty = use mainSections
-include_list_pages = true
-show_image = true
-show_description = true
-show_tags = false
-show_categories = false
 
 # announcement
 # announcement module: https://github.com/gethugothemes/hugo-modules/tree/master/components/announcement
@@ -79,7 +69,7 @@ keywords = ["RSE", "Research Software Engineering", "hackathon", "Santiago", "Ch
 description = "Hackathon de Research Software Engineering (RSE) en Santiago de Chile, 2027"
 author = "Charlas RSE en español"
 twitter = ""
-image = "images/og-image.png"
+image = ""
 
 
 # site verifications
@@ -102,30 +92,3 @@ button = "I Accept"
 # diagrams
 [mermaid]
 js_url = 'https://cdn.jsdelivr.net/npm/mermaid@latest/dist/mermaid.esm.min.mjs'
-
-######################## sidebar widgets #########################
-[widgets]
-sidebar = ["categories", "tags"]
-
-
-# google map
-[google_map]
-enable = false
-map_api_key = "" # Replace with your Google Maps API key
-map_latitude = "51.5223477"
-map_longitude = "-0.1622023"
-map_marker = "images/marker.png"
-
-
-# Subscription
-[subscription]
-enable = false
-# mailchimp subsciption
-mailchimp_form_action = "https://gmail.us4.list-manage.com/subscribe/post?u=463ee871f45d2d93748e77cad&amp;id=a0a2c6d074" # replace this url with yours
-mailchimp_form_name = "b_463ee871f45d2d93748e77cad_a0a2c6d074"
-
-# OpenRemark Comments
-[open_remark]
-enable = true
-site_key = "cmq51sse6000504l2761vcywi"                 # your site key from the OpenRemark dashboard
-embed_url = "https://open-remark.zeon.studio/embed.js" # OpenRemark embed.js URL | Make sure it didn't change

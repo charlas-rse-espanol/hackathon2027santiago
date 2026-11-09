@@ -10,9 +10,6 @@ max = "0.165.0"
 path = "github.com/gethugothemes/hugo-modules/llms-txt"
 
 [[imports]]
-path = "github.com/gethugothemes/hugo-modules/search"
-
-[[imports]]
 path = "github.com/gethugothemes/hugo-modules/pwa"
 
 [[imports]]
@@ -44,9 +41,6 @@ path = "github.com/gethugothemes/hugo-modules/tab"
 
 [[imports]]
 path = "github.com/gethugothemes/hugo-modules/modal"
-
-[[imports]]
-path = "github.com/gethugothemes/hugo-modules/gallery-slider"
 
 [[imports]]
 path = "github.com/gethugothemes/hugo-modules/components/preloader"

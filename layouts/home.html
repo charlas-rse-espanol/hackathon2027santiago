@@ -1,0 +1,176 @@
+{{ define "main" }}
+  <!-- Banner -->
+  {{ with .Params.banner }}
+    <section class="section home-banner pt-14">
+      <div class="container">
+        <div class="row justify-center">
+          <div class="home-text lg:col-7 md:col-9 mb-7 text-center">
+            {{ $rw := .title_rewrite }}
+            {{ if and $rw (strings.Contains .title $rw.word) }}
+              {{/* the word is deleted and re-typed in cursive by the script below */}}
+              {{ $parts := split .title $rw.word }}
+              <link
+                rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap" />
+              <h1 class="mb-4 text-h3 lg:text-h1" aria-label="{{ .title }}">
+                <span aria-hidden="true"
+                  >{{ index $parts 0 }}<span
+                    class="title-rewrite"
+                    data-from="{{ $rw.word }}"
+                    data-to="{{ $rw.to }}"
+                    ><span class="title-rewrite-text">{{ $rw.word }}</span></span
+                  >{{ delimit (after 1 $parts) $rw.word }}</span
+                >
+              </h1>
+              <script>
+                (function () {
+                  var el = document.querySelector(".title-rewrite");
+                  var text = el.querySelector(".title-rewrite-text");
+                  var words = [el.dataset.from, el.dataset.to];
+                  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+                    text.textContent = words[1];
+                    el.classList.add("is-cursive");
+                    return;
+                  }
+                  function wait(ms) {
+                    return new Promise(function (r) { setTimeout(r, ms); });
+                  }
+                  var idx = 0;
+                  (async function loop() {
+                    while (true) {
+                      await wait(idx ? 2500 : 1800);
+                      while (text.textContent.length) {
+                        text.textContent = text.textContent.slice(0, -1);
+                        await wait(70);
+                      }
+                      idx = 1 - idx;
+                      el.classList.toggle("is-cursive", idx === 1);
+                      await wait(300);
+                      for (var k = 1; k <= words[idx].length; k++) {
+                        text.textContent = words[idx].slice(0, k);
+                        await wait(110);
+                      }
+                    }
+                  })();
+                })();
+              </script>
+            {{ else }}
+              <h1 class="mb-4 text-h3 lg:text-h1">
+                {{ .title | markdownify }}
+              </h1>
+            {{ end }}
+            <p class="mb-8 text-xl md:text-2xl">
+              {{ .content | markdownify }}
+            </p>
+            {{ with .details }}
+              {{/* mb-4 + the text block's mb-7 = the gap above the image */}}
+              <p class="text-text-light dark:text-darkmode-text-light mb-4 text-lg md:text-xl">
+                {{ range $i, $line := . }}
+                  {{ if $i }}<br />{{ end }}
+                  {{ $line | markdownify }}
+                {{ end }}
+              </p>
+            {{ end }}
+          </div>
+          {{ with .image }}
+            <div class="col-12">
+              {{/* image modules comes from https://github.com/gethugothemes/hugo-modules/tree/master/images */}}
+              {{ partial "image" (dict "Src" . "Alt" ($.Params.banner.image_alt | default "Banner image") "Loading" "eager" "Class" "mx-auto rounded-2xl lg:!max-w-[800px]" "DisplayXL" "800x" ) }}
+            </div>
+          {{ end }}
+          {{/* button goes under the image */}}
+          {{ with .button }}
+            {{ if .enable }}
+              {{/* a "#..." link jumps to a section on this page */}}
+              {{ $link := .link }}
+              {{ if not (strings.HasPrefix $link `#`) }}
+                {{ $link = $link | absURL }}
+              {{ end }}
+              <div class="col-12 mt-8 text-center">
+                <a
+                  class="btn btn-primary"
+                  href="{{ $link }}"
+                  {{ if strings.HasPrefix .link `http` }}
+                    target="_blank" rel="noopener"
+                  {{ end }}>
+                  {{ .label }}
+                </a>
+              </div>
+            {{ end }}
+          {{ end }}
+        </div>
+      </div>
+    </section>
+  {{ end }}
+  <!-- /Banner -->
+
+  <!-- Features -->
+  {{ range $i, $e:= .Params.features }}
+    <section
+      {{ with .id }}id="{{ . }}"{{ end }}
+      class="section-sm {{ if (modBool $i 2) }}bg-gradient{{ end }}">
+      <div class="container">
+        <div class="row items-center justify-between">
+          <div
+            class="mb:md-0 {{ if not (modBool $i 2) }}
+              md:order-2
+            {{ end }} md:col-5 mb-6">
+            {{ partial "image" (dict "Src" .image "Alt" (.image_alt | default "feature image") "DisplayXL" "520x" "DisplayLG" "425x" "DisplayMD" "360x") }}
+          </div>
+          <div
+            class="{{ if not (modBool $i 2) }}
+              md:order-1
+            {{ end }} home-text md:col-7 lg:col-6">
+            <h2 class="section-title mb-6">
+              {{ .title | markdownify }}
+            </h2>
+            <p class="mb-8 text-lg">
+              {{ .content | markdownify }}
+            </p>
+            <ul>
+              {{ range .bulletpoints }}
+                <li class="relative mb-4 pl-6">
+                  <i class="fa fa-check absolute left-0 top-1.5"></i>
+                  {{ . | markdownify }}
+                </li>
+              {{ end }}
+            </ul>
+            {{ with .button }}
+              {{ if .enable }}
+                {{/* an empty link uses the application form URL from params.toml */}}
+                {{ $link := .link | default site.Params.navigation_button.link }}
+                <a
+                  class="btn btn-primary mt-6"
+                  href="{{ $link | absURL }}"
+                  {{ if strings.HasPrefix $link `http` }}
+                    target="_blank" rel="noopener"
+                  {{ end }}>
+                  {{ .label }}
+                </a>
+              {{ end }}
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </section>
+  {{ end }}
+  {{ with .Params.more_info_button }}
+    {{ if .enable }}
+      <div class="container pb-14 text-center">
+        <a class="btn btn-primary" href="{{ .link | absURL }}">
+          {{ .label }}
+        </a>
+      </div>
+    {{ end }}
+  {{ end }}
+  <!-- /Features -->
+
+  <!-- Organizations -->
+  {{/* one shared gradient so these two read as a single block */}}
+  <div class="org-block">
+    {{ partial "organizations" (dict "page" "sections/organizan") }}
+    {{ partial "organizations" (dict "page" "sections/apoyos") }}
+  </div>
+  {{ partial "organizations" (dict "page" "sections/anfitrion") }}
+  <!-- /Organizations -->
+{{ end }}

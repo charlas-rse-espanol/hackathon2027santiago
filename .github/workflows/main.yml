@@ -1,4 +1,5 @@
 # workflow for building and deploying to GitHub Pages
+# (pull requests only build the site, as a CI check)
 name: Deploy Hugo site to Pages
 
 on:
@@ -6,11 +7,25 @@ on:
   push:
     branches: ["main"]
 
+  # Builds (but doesn't deploy) pull requests into the default branch
+  pull_request:
+    branches: ["main"]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
+
+# Allow only one concurrent deployment, skipping runs queued between the run
+# in-progress and latest queued. Don't cancel in-progress runs.
+# Pull request builds get their own group per PR, and newer pushes cancel older runs.
+concurrency:
+  group: ${{ github.event_name == 'pull_request' && format('pr-{0}', github.ref) || 'pages' }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 # Default to bash
 defaults:
@@ -54,6 +69,7 @@ jobs:
 
       - name: Setup Pages
         id: pages
+        if: github.event_name != 'pull_request'
         uses: actions/configure-pages@v5
 
       - name: Setup Project
@@ -64,16 +80,34 @@ jobs:
 
       # baseURL comes from the Pages settings, e.g.
       # https://charlas-rse-espanol.github.io/hackathon-rse-santiago-2027/
+      # (pull requests skip Setup Pages and use the baseURL from hugo.toml)
       - name: Build site
-        run: npm run build -- --baseURL "${{ steps.pages.outputs.base_url }}/"
+        run: |
+          if [[ -n "${{ steps.pages.outputs.base_url }}" ]]; then
+            npm run build -- --baseURL "${{ steps.pages.outputs.base_url }}/"
+          else
+            npm run build
+          fi
 
       - name: Upload artifact
+        if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v3.0.1
         with:
           path: ./public
 
+      # On pull requests, upload the built site as a downloadable artifact
+      # so it can be checked locally (it isn't deployed)
+      - name: Upload site preview
+        if: github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-preview
+          path: ./public
+          retention-days: 7
+
   # Deployment job
   deploy:
+    if: github.event_name != 'pull_request'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

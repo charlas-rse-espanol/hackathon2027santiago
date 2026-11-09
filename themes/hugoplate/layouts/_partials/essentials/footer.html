@@ -1,4 +1,4 @@
-<footer class="bg-light dark:bg-darkmode-light">
+<footer class="bg-light dark:bg-darkmode-light text-xs">
   <div class="container">
     <div class="row items-center py-10">
       <div class="lg:col-3 mb-8 text-center lg:mb-0 lg:text-left">
@@ -54,6 +54,11 @@
       <p>
         {{ site.Params.copyright | markdownify }}
       </p>
+      {{ with site.Params.credits }}
+        <p class="mt-2">
+          {{ . | markdownify }}
+        </p>
+      {{ end }}
     </div>
   </div>
 </footer>

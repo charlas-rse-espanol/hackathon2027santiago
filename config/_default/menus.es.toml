@@ -11,9 +11,3 @@ name = "Sobre el hackathon"
 pageRef = "/sobre-el-hackathon"
 weight = 2
 
-
-# footer menu
-[[footer]]
-name = "Sobre el hackathon"
-pageRef = "/sobre-el-hackathon"
-weight = 1
