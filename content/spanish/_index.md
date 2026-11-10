@@ -50,6 +50,8 @@ features:
       - "Estudiantes de postgrado"
       - "Investigadores postdoctorales, personal técnico"
       - "Con formación en ciencias, humanidades o ingeniería"
+    # text shown after the bullet points
+    note: "Las postulaciones estarán abiertas **hasta el viernes 27 de noviembre**."
     button:
       enable: true
       label: "-> Postula"

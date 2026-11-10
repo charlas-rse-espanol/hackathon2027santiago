@@ -135,6 +135,9 @@
                 </li>
               {{ end }}
             </ul>
+            {{ with .note }}
+              <p class="mt-6 text-lg">{{ . | markdownify }}</p>
+            {{ end }}
             {{ with .button }}
               {{ if .enable }}
                 {{/* an empty link uses the application form URL from params.toml */}}
