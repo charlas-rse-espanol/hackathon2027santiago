@@ -25,6 +25,9 @@ banner:
   details:
     - "📍 Santiago de Chile, 12 - 14 enero 2027"
     - "Campus San Joaquín (UC Chile)"
+  # shown under the details, with a gap above it, as a coral link to the
+  # application form (navigation_button.link in config/_default/params.toml)
+  deadline: "Postula antes del viernes 27 de noviembre"
 
 # Features
 features:
@@ -50,6 +53,8 @@ features:
       - "Estudiantes de postgrado"
       - "Investigadores postdoctorales, personal técnico"
       - "Con formación en ciencias, humanidades o ingeniería"
+    # text shown after the bullet points
+    note: "Las postulaciones estarán abiertas **hasta el viernes 27 de noviembre**."
     button:
       enable: true
       label: "-> Postula"

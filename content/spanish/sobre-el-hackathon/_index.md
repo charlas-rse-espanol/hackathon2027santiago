@@ -29,7 +29,7 @@ Los participantes deberán traer su propia computadora, en la que usualmente pro
 
 #### ¿Cuándo y dónde se realizará el hackathon?
 
-El hackathon se realizará de forma **presencial** en el [campus San Joaquín](https://maps.app.goo.gl/X2ZNPbdHnCoMQ9YX9) de la Pontificia Universidad Católica de Chile, los días **14, 15 y 16** de enero de 2027. 
+El hackathon se realizará de forma **presencial** en el [campus San Joaquín](https://maps.app.goo.gl/X2ZNPbdHnCoMQ9YX9) de la Pontificia Universidad Católica de Chile, los días **12, 13 y 14** de enero de 2027. 
 
 #### ¿Qué costo tiene participar?
 

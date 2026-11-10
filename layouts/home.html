@@ -4,7 +4,7 @@
     <section class="section home-banner pt-14">
       <div class="container">
         <div class="row justify-center">
-          <div class="home-text lg:col-7 md:col-9 mb-7 text-center">
+          <div class="home-text lg:col-7 md:col-9 mb-6 text-center">
             {{ $rw := .title_rewrite }}
             {{ if and $rw (strings.Contains .title $rw.word) }}
               {{/* the word is deleted and re-typed in cursive by the script below */}}
@@ -71,6 +71,21 @@
                 {{ end }}
               </p>
             {{ end }}
+            {{ with .deadline }}
+              {{/* mt-8 sets the gap below the details (the margins overlap, they don't add up) */}}
+              {{/* links in .home-text are coral, bold and underlined (assets/css/custom.css) */}}
+              {{ $link := site.Params.navigation_button.link }}
+              {{/* mb-0: only the text block's mb-7 sits between this line and the image */}}
+              <p class="mt-5 mb-0 text-lg md:text-xl">
+                <a
+                  href="{{ $link | absURL }}"
+                  {{ if strings.HasPrefix $link `http` }}
+                    target="_blank" rel="noopener"
+                  {{ end }}>
+                  {{ . | markdownify }}
+                </a>
+              </p>
+            {{ end }}
           </div>
           {{ with .image }}
             <div class="col-12">
@@ -135,6 +150,9 @@
                 </li>
               {{ end }}
             </ul>
+            {{ with .note }}
+              <p class="mt-6 text-lg">{{ . | markdownify }}</p>
+            {{ end }}
             {{ with .button }}
               {{ if .enable }}
                 {{/* an empty link uses the application form URL from params.toml */}}
