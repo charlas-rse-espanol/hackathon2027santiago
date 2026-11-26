@@ -27,7 +27,7 @@ banner:
     - "Campus San Joaquín (UC Chile)"
   # shown under the details, with a gap above it, as a coral link to the
   # application form (navigation_button.link in config/_default/params.toml)
-  deadline: "Postula antes del viernes 27 de noviembre"
+  deadline: "Postula antes del viernes ~~27 de noviembre~~ 4 de diciembre"
 
 # Features
 features:
@@ -54,7 +54,7 @@ features:
       - "Investigadores postdoctorales, personal técnico"
       - "Con formación en ciencias, humanidades o ingeniería"
     # text shown after the bullet points
-    note: "Las postulaciones estarán abiertas **hasta el viernes 27 de noviembre**."
+    note: "Las postulaciones estarán abiertas **hasta el viernes 4 de diciembre**."
     button:
       enable: true
       label: "-> Postula"
