@@ -55,7 +55,7 @@ El hackathon tiene como público objetivo personas que están participando actua
 
 #### ¿Hasta cuándo puedo postular?
 
-Las postulaciones estarán abiertas **hasta el viernes 27 de noviembre**. Los resultados se comunicarán en la semana del 7 al 11 de diciembre.
+Las postulaciones estarán abiertas **hasta el viernes 4 de diciembre**. Los resultados se comunicarán en torno al 14 de diciembre.
 
 
 #### Tengo una pregunta que no aparece aquí...
